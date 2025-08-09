@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<title>★ここにタイトルを入れる★</title>
+<meta name="description" content="★ここにページの説明文を入れる★">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="★ここにページのURLを入れる★">
+<meta property="og:title" content="★ここにタイトルを入れる★">
+<meta property="og:description" content="★ここにページの説明文を入れる★">
+<meta property="og:image" content="https://www.nikka.com/★ここにOGP画像パスを入れる★">
+
+<meta name="twitter:card" content="summary_large_image" />
+
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/head_links.html'; ?>
+
+<link rel="stylesheet" href="/common/css/reset.css">
+<link rel="stylesheet" href="/en/common/css/style.css">
+
+<!--▼ ページ固有のcssここから ▼-->
+<!-- <link rel="stylesheet" href="★ここにファイルのパスを入れてコメントアウト解除★"> -->
+<!--▲ ページ固有のcssここまで ▲-->
+
+</head>
+
+<!--▼ デフォルトのページトップボタンを使用しない場合はbodyタグに「 data-pagetop="custom"」を付与 ▼-->
+<body data-type="RN2024">
+
+  <!-- wrapper start -->
+  <div id="wrapper">
+
+    <!---------------------------- header start ---------------------------->
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/head.tmp.html'; ?>
+    <!----------------------------- header end ----------------------------->
+
+    <!-- contents start -->
+    <main>
+
+      <!---------------------------- breadcrumbs start ---------------------------->
+      <div class="breadcrumbs">
+        <div class="inner" data-type="wide">
+          <?php breadcrumbs(); ?>
+        </div>
+      </div>
+      <!----------------------------- breadcrumbs end ----------------------------->
+
+      <div class="contents">
+      <!--▼ コンテンツエリアここから ▼-->
+
+      <p style="padding:50px 0px; text-align:center;">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      【content goes here】
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </p>
+
+      <!--▲ コンテンツエリアここまで ▲-->
+      </div>
+
+    </main>
+    <!-- contents end -->
+
+    <!---------------------------- footer start ---------------------------->
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/en/common/template/foot.tmp.html'; ?>
+    <!----------------------------- footer end ----------------------------->
+
+  </div>
+  <!-- wrapper end -->
+
+  <!--▼ ページ固有のjsここから ▼-->
+  <!-- <script src="★ここにファイルのパスを入れてコメントアウト解除★"></script> -->
+  <!--▲ ページ固有のjsここまで ▲-->
+
+  <!---------------------------- 構造化データ出力 start ---------------------------->
+  <?php breadcrumbs_jsonld(); ?>
+  <!---------------------------- 構造化データ出力 end ---------------------------->
+
+</body>
+
+</html>

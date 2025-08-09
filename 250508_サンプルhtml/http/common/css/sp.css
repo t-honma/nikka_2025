@@ -1,0 +1,494 @@
+@charset "UTF-8";
+
+/*================
+
+ SPページ専用CSS
+ 
+================*/
+
+/* ------------------------------------
+◆　all
+------------------------------------ */
+html, body {
+  width: 100%;
+  height: 100%;
+  line-height: 1.2em;
+  color: #333;
+  font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho ProN", "MS P 明朝", "MS PMincho", serif;
+  font-size: 13px;
+  background-color: #F9F7EF;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.win * {
+  font-family: "ＭＳ Ｐゴシック","MS PGothic","メイリオ", "Meiryo",sans-serif!important;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+	outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.hover:hover{
+  cursor: pointer;
+  filter: alpha(opacity=70);
+  -ms-filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+
+#wrapper {
+  width: 100%;
+  min-width: 1030px;
+  margin: 0 auto;
+  background-image: url("/common/img/emblem.png");
+  background-repeat: no-repeat;
+  background-position: 10% 75%;
+  background-attachment:fixed;
+  min-height: 100%;
+}
+
+/* ------------------------------------
+◆　header
+------------------------------------ */
+#header {
+  width: 100%;
+  min-width: 950px;
+  height: 100px;
+  background: #FFFFFF;
+}
+
+#header_inner {
+  width: 950px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#header_inner>* {
+  position: absolute;
+}
+
+#header_inner #logo {
+  width: 260px;
+  height: 53px;
+  top: 28px;
+}
+
+#header_inner #logo img {
+  width: 100%;
+  height: 100%;
+}
+
+#header_inner ul {
+  left: 278px;
+  top: 27px;
+}
+
+#header_inner ul li {
+  display: block;
+  float: left;
+}
+
+#header_inner ul li a {
+  width: 112px;
+  height: 53px;
+  display: block;
+  background-image: url("/common/img/header_menu_bg.png");
+  background-repeat: no-repeat;
+}
+
+#header_inner ul li a#header_menu1 {
+  background-position: 0 0;
+}
+
+#header_inner ul li a#header_menu2 {
+  background-position: -112px 0;
+}
+
+#header_inner ul li a#header_menu3 {
+  background-position: -224px 0;
+}
+
+#header_inner ul li a#header_menu4 {
+  background-position: -336px 0;
+}
+
+#header_inner ul li a#header_menu5 {
+  background-position: -448px 0;
+}
+
+#header_inner ul li a#header_menu6 {
+  background-position: -560px 0;
+}
+
+#header_inner ul li a#header_menu1:hover,
+#header_inner ul li a#header_menu1.selected {
+  background-position: 0 -53px;
+}
+
+#header_inner ul li a#header_menu2:hover,
+#header_inner ul li a#header_menu2.selected {
+  background-position: -112px -53px;
+}
+
+#header_inner ul li a#header_menu3:hover,
+#header_inner ul li a#header_menu3.selected {
+  background-position: -224px -53px;
+}
+
+#header_inner ul li a#header_menu4:hover,
+#header_inner ul li a#header_menu4.selected {
+  background-position: -336px -53px;
+}
+
+#header_inner ul li a#header_menu5:hover,
+#header_inner ul li a#header_menu5.selected {
+  background-position: -448px -53px;
+}
+
+#header_inner ul li a#header_menu6:hover,
+#header_inner ul li a#header_menu6.selected {
+  background-position: -560px -53px;
+}
+
+
+#header_inner #en {
+  width: 62px;
+  height: 13px;
+  display: block;
+  left: 888px;
+  top: 8px;
+  background: url("../img/en.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+#header_inner #en:hover {
+  background-position: left -13px;
+}
+
+#header_inner #sp_menu,
+#header_inner #sp_menu_content  {
+  display: none;
+  z-index: 9999;
+}
+
+
+/*---------
+ path
+---------*/
+#path{
+	background-color: #FFFFFF;
+    font-size: 11px;
+    height: 25px;
+    width: 100%;
+}
+
+#path .inner{
+	margin: 0 auto;
+    width: 950px;
+	text-align:right;
+}
+#path .inner a{
+	color: #8B6C1D;
+	text-decoration:none;
+}
+#path .inner a:hover{
+	text-decoration:underline;
+}
+
+/* ------------------------------------
+◆　contents
+------------------------------------ */
+#contents {
+}
+
+/* ------------------------------------
+◆　footer
+------------------------------------ */
+#footer_social >*{
+  margin: 0 5px 0 0;
+  float: left!important;
+}
+#footer_social > #twitter-widget-0 {
+  width: 100px!important;
+}
+
+#footer_social > .fb-like {
+  width: auto!important;
+}
+
+#sp_footer_title,
+#sp_footer_link {
+  display: none;
+}
+
+
+
+/* SPサイトのみ適用 */
+
+body,html {
+	width:100%;
+	max-width: 640px;
+	margin:0 auto;
+}
+#wrapper {
+	width: 100%;
+	min-width: 640px;
+	background-size: 320px auto;
+	overflow-x: hidden;
+}
+
+#header {
+	min-width: 640px;
+	height: 90px;
+}
+#header_inner {
+	width : 100%;
+}
+#header_inner #logo {
+	height: 53px;
+	left: 15px;
+	top: 18px;
+	width: 260px;
+}
+#header_inner ul,
+#header_inner #en {
+	display: none;
+}
+#header_inner #sp_menu {
+	display: block;
+	position: absolute;
+	right: 30px;
+	top: 26px;
+}
+#sp_menu_content {
+	width: 100%;
+	position: fixed;
+	display: none;
+	background: rgba(0,0,0,0.6);
+	z-index: 20;
+}
+#sp_menu_close {
+	position: absolute;
+	right: -24px;
+	top: -36px;
+	z-index: 30;
+}
+#sp_menu_content_inner {
+	width: 580px;
+	margin: 0 0 0 -290px;
+	padding: 8px 0 20px 0;
+	position: absolute;
+	left:  50%;
+	top: 70px;
+	background: #FFFFFF;
+}
+#sp_menu_content_inner a {
+	display: block;
+	float: left;
+	border: 1px solid #D3C086;
+}
+#sp_menu_content_inner a.left {
+	margin: 12px 6px 0 12px;
+}
+#sp_menu_content_inner a.right {
+	margin: 12px 12px 0 6px;
+}
+#sp_menu_content_inner a img{
+	width: 268px;
+	height: auto;
+	display: block;
+}
+#sp_menu_content_inner a .bottom_text,#sp_menu_content_inner a .p2 {
+	width: 268px;
+	height: auto;
+	line-height: 39px;
+	text-align: center;
+	font-size: 15px!important;
+	letter-spacing: 5px;
+}
+#sp_menu_content_inner a .p2 {
+	letter-spacing: 1px!important;
+}
+#sp_menu_content_inner a .bottom_text {
+	background-image: url('../../img/top_link_button1.png');
+	background-repeat: repeat-x;
+}
+#path{
+	display:none;
+	}
+
+#footer {
+	position: relative!important;
+}
+
+#sp_footer {
+	padding: 30px 0 0 0;
+	display: block;
+}
+
+#sp_footer > * {
+	max-width: 100%;
+}
+
+#sp_footer_title {
+	height: auto;
+	margin: 60px auto 0 auto;
+	display: block;
+}
+
+#footer_inner {
+	margin: 0 auto;
+	display: none;
+}
+
+#sp_footer_link {
+	margin: 0 auto;
+}
+#sp_footer_link li a {
+	background-repeat: no-repeat;
+}
+#sp_footer_link li {
+	margin: 12px 0 0 0;
+	display: block;
+}
+#sp_footer_link li a {
+	width: 100%;
+	display: block;
+}
+#sp_footer_link1 {
+	height: 93px;
+	background: url("/common/img/sp_footer_link_bg.png") 50% 0;
+}
+#sp_footer_link2 {
+	height: 81px;
+	background: url("/common/img/sp_footer_link_bg.png") 50% -105px;
+}
+#sp_footer_link3 {
+	height: 81px;
+	background: url("/common/img/sp_footer_link_bg.png") 50% -198px;
+}
+#sp_footer_link4 {
+	height: 81px;
+	background: url("/common/img/sp_footer_link_bg.png") 50% -291px;
+}
+#sp_footer_link5 {
+	height: 81px;
+	background: url("/common/img/sp_footer_link_bg.png") 50% -385px;
+}
+#sp_footer_menu {
+	width: 610px;
+	margin: 0 auto 80px auto;
+}
+#sp_footer_menu li {
+	width: 100%;
+	margin: 28px 0 0 0;
+	display: block;
+}
+#sp_footer_menu li a {
+	width: 100%;
+	height: 23px;
+	margin: 30px auto 0 auto;
+	padding: 10px 0 0 52px;
+	font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho ProN", "MS P 明朝", "MS PMincho", serif;
+	font-size: 30px;
+	display: block;
+	background-image: url('../img/goodsinfo_icon_sp.png');
+	background-repeat: no-repeat;
+}
+#sp_footer_bottom {
+	width: 100%;
+	background: #FFFFFF;
+}
+#sp_footer_bottom .attention {
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+	text-align: center;
+}
+#sp_footer_bottom .attention img{
+	max-width:100%;
+	height:auto;
+}	
+#sp_footer_bottom .bottom{
+	text-align: center;
+	padding:20px 0;
+}
+
+#sp_footer_bottom .bottom a.logo_asahi{
+	margin:0 0 10px 0;
+	display:block;
+}
+#footer {
+	position: relative;
+}
+#footer_social {
+	width: 610px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	bottom: 168px;
+	margin: 0 0 0 -305px;
+}
+#footer .footer_menu li.twitter iframe {
+	width: 90px!important;
+}
+#footer_social>* {
+	zoom: 1.5;
+	-moz-transform: scale(1.5);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1.5);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1.5);
+	-webkit-transform-origin: 0 0;
+}
+[data-plugins-type="mixi-favorite"] {
+	width: 78px;
+}
+#___plusone_0 {
+	width: 66px!important;
+}
+#footer .fb-like {
+	width: 102px!important;
+	height: 20px!important;
+}
+.backToTop{
+	width: 610px;
+	margin: 0 auto;
+	padding: 60px 0 30px 0;
+}
+.backToTop a{
+	width: 224px;
+	height: 31px;
+	display: block;
+	float: right;
+	background: url("../img/backtotop_sp.png");
+}
+
+
+.bx-wrapper .bx-loading {
+  background-color: transparent!important;
+}

@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+body[data-type="RN2024"] main .inner{
+  min-width: auto;
+}
+
+footer{
+  display: none;
+}
+
+@media screen and (min-width : 768px){
+
+  .contents{
+	min-height: 100vh;
+  }
+  .contents .inner{
+    text-align: center;
+    padding: var(--px-190) 0 var(--px-80) 0;
+  }
+	
+  h1{
+    margin: 0 0 var(--px-60) 0;
+  }
+  h1 span.main{
+    font-family: "Lato", serif;
+    font-size: var(--px-48);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+  }
+  h1 span.sub{
+	display: block;
+    font-size: var(--px-20);
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    line-height: 1.2;
+	margin: var(--px-20) 0 0 0;
+  }
+
+  .txt{
+    display: flex;
+    flex-direction: column;
+    gap: var(--px-40);
+    margin: 0 0 var(--px-45) 0;
+  }
+  .txt p[data-type="ja"] span{
+	display: block;
+	font-size: var(--px-15);
+	letter-spacing: 0.18em;
+	line-height: 2.0;
+  }
+
+  .txt p[data-type="en"] span{
+	display: block;
+	font-family: "Lato", serif;
+	font-weight: 300;
+	font-size: var(--px-15);
+	letter-spacing: 0.1em;
+	line-height: 2.0;
+  }
+
+  .logo{
+    width: var(--px-250);
+    margin: 0 auto;
+    text-align: center;
+  }
+  .logo svg{
+    fill: #8d9ba2;
+    height: auto;
+  }
+  .logo svg[data-type="emblem"]{
+    aspect-ratio: 152 / 113;
+    width: 100%;
+  }
+
+
+
+
+
+
+
+}@media screen and (max-width : 767px){
+
+	.contents .inner{
+		text-align: center;
+		padding: var(--px-150) 0 var(--px-80) 0;
+	  }
+	
+	  h1{
+		margin: 0 -6vw var(--px-60);
+	  }
+	  h1 span.main{
+		font-family: "Lato", serif;
+		font-size: var(--px-38);
+		font-weight: 300;
+		letter-spacing: 0.05em;
+		line-height: 1.2;
+		white-space: nowrap;
+	  }
+	  h1 span.sub{
+		display: block;
+		font-size: var(--px-15);
+		font-weight: 400;
+		letter-spacing: 0.18em;
+		line-height: 1.2;
+		margin: var(--px-20) 0 0 0;
+	  }
+	
+	  .txt{
+		display: flex;
+		flex-direction: column;
+		gap: var(--px-36);
+		margin: 0 0 var(--px-48) 0;
+	  }
+	  .txt p[data-type="ja"] span{
+		display: block;
+		font-size: var(--px-15);
+		letter-spacing: 0.18em;
+		line-height: 2.2;
+		text-align: left;
+	  }
+	  .txt p[data-type="ja"] span:nth-of-type(n+2){
+		margin-top: var(--px-28);
+	  }
+	
+	  .txt p[data-type="en"] span{
+		display: block;
+		font-family: "Lato", serif;
+		font-weight: 300;
+		font-size: var(--px-15);
+		letter-spacing: 0.1em;
+		line-height: 2.2;
+		text-align: left;
+	  }
+	  .txt p[data-type="en"] span:nth-of-type(n+2){
+		margin-top: var(--px-20);
+	  }
+	
+	  .logo{
+		width: var(--px-190);
+		margin: 0 auto;
+		text-align: center;
+	  }
+	  .logo svg{
+		fill: #8d9ba2;
+		height: auto;
+	  }
+	  .logo svg[data-type="emblem"]{
+		aspect-ratio: 152 / 113;
+		width: 100%;
+	  }
+	
+
+
+
+}
+
+

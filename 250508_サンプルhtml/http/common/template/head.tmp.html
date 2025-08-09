@@ -1,0 +1,166 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/inner/head_navi_inner.tmp.html'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/include/svg-assets.html'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/common/include/vars.php';?>
+
+<!-- 開発環境用(納品時非表示) -->
+<!-- <link href="https://ce.mf.marsflag.com/latest/css/mf-search.css" rel="stylesheet" type="text/css" media="all" charset="UTF-8"> -->
+<!-- <link href="/searchwindow.css" rel="stylesheet" type="text/css" media="all" charset="UTF-8"> -->
+
+<!-- SiteCatalyst_call start -->
+
+<script type="text/javascript">
+function s_code_onload(){
+  // WithAsahi用 企業ID取得
+  var cookies = document.cookie;
+  var cookiesArray = cookies.split(';');
+  var with_asahi_id;
+
+  for(var c of cookiesArray){
+      var cArray = c.split('=');
+
+      var pattern = /YUKO_ID$/;   // YUKO_ID
+      if( cArray[0].match(pattern) ){
+         with_asahi_id = cArray[1];
+      }
+    }
+
+   s.eVar44 = with_asahi_id;
+   s.t();
+}
+</script>
+<!-- SiteCatalyst_call end -->
+
+<!-- SiteCatalyst_js start -->
+<script type="text/javascript" src="/web-service/common/sc_parts/s_code.js" onload="s_code_onload()"></script>
+<!-- SiteCatalyst_js end -->
+<header>
+    <div class="inner">
+        <a id="logo" href="/"><svg aria-label="NIKKA WWHISKY"><use xlink:href="#logo_text"></use></svg></a>
+        <nav>
+            <div class="nav_close" data-view="sp">
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav_menu">
+                <li><a href="/brands/">
+                    <p class="hover_txt">OUR BRANDS</p>
+                    <p data-type="jp">商品紹介</p>
+                </a></li>
+                <li><a href="/distilleries/">
+                    <p class="hover_txt">DISTILLERIES</p>
+                    <p data-type="jp">蒸溜所</p>
+                </a></li>
+                <li><a href="/story/">
+                    <p class="hover_txt">STORY</p>
+                    <p data-type="jp">ストーリー</p>
+                </a></li>
+                <li><a href="/about/">
+                    <p class="hover_txt">ABOUT US</p>
+                    <p data-type="jp">会社案内</p>
+                </a></li>
+                <li><a href="/contact/">
+                    <p class="hover_txt">CONTACT US</p>
+                    <p data-type="jp">お問い合わせ</p>
+                </a></li>
+            </ul>
+
+            <div class="search_area">
+                <div class="search_close" data-view="pc">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mf_finder_container" data-view="pc">
+
+                    <!--<div class="mf_finder_searchBox mf_finder_searchBox_useSelects">
+                        <form method="get" action="/insidesearch/index.html#/" class="mf_finder_searchBox_form">
+                            <input type="hidden" name="page" value="1">
+                            <input type="hidden" name="d">
+                            <div class="mf_finder_searchBox_items_wrapper">
+                                <div class="mf_finder_searchBox_items">
+                                    <label class="mf_finder_searchBox_doctype" style="display: none;">
+                                        <select name="doctype" class="mf_finder_searchBox_doctype_select">
+                                            <option value="all">All</option>
+                                            <option value="html"> html </option>
+                                            <option value="pdf"> pdf </option>
+                                            <option value="doc"> doc </option>
+                                            <option value="xls"> xls </option>
+                                            <option value="ppt"> ppt </option>
+                                        </select>
+                                    </label>
+                                    <div class="mf_finder_searchBox_query_wrap">
+                                        <input type="text" name="q" autocomplete="off" title="search query" placeholder="" maxlength="100" class="mf_finder_searchBox_query_input">
+                                    </div>
+                                    <button type="submit" class="mf_finder_searchBox_submit"><span></span></button>
+                                </div>
+                            </div>
+                            <div class="mf_finder_searchBox_selects" style="display: none;">
+                                <div class="mf_finder_searchBox_misc">
+                                    <label class="mf_finder_searchBox_sort">
+                                        <select name="sort" class="mf_finder_searchBox_sort_select">
+                                            <option class="mf_finder_searchBox_sort_opt_0" value="0"> match </option>
+                                            <option class="mf_finder_searchBox_sort_opt_1" value="1"> recent </option>
+                                        </select>
+                                    </label>
+                                    <label class="mf_finder_searchBox_pagemax">
+                                        <select name="pagemax" class="mf_finder_searchBox_pagemax_select">
+                                            <option class="mf_finder_searchBox_pagemax_opt_1" value="10"> 10 </option>
+                                            <option class="mf_finder_searchBox_pagemax_opt_2" value="20"> 20 </option>
+                                            <option class="mf_finder_searchBox_pagemax_opt_3" value="30"> 30 </option>
+                                        </select>
+                                    </label>
+                                    <label class="mf_finder_searchBox_imgsize">
+                                        <select name="imgsize" class="mf_finder_searchBox_imgsize_select">
+                                            <option class="mf_finder_searchBox_imgsize_opt_0" value="0"> none </option>
+                                            <option class="mf_finder_searchBox_imgsize_opt_1" value="1"> small </option>
+                                            <option class="mf_finder_searchBox_imgsize_opt_2" value="2"> medium </option>
+                                            <option class="mf_finder_searchBox_imgsize_opt_3" value="3"> large </option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <img id="footer_search_txt" src="/common/img/search_txt.gif" alt="当サイト及びアサヒビールサイト内を対象に検索します。"></div> -->
+
+
+                    <!-- ↓検索窓用カスタムエレメント -->
+                    <mf-search-box
+                    submit-text=""
+                    ajax-url="https://finder.api.mf.marsflag.com/api/v1/finder_service/documents/592d8a31/search"
+                    serp-url="/insidesearch/index.html#/"
+                    doctype-hidden
+                    options-hidden
+                    placeholder="SEARCH"
+                    imgsize-default="3"
+                    ></mf-search-box>
+                </div>
+                <div class="mf_finder_container" data-view="sp">
+                    <!-- ↓検索窓用カスタムエレメント -->
+                    <mf-search-box
+                    submit-text=""
+                    ajax-url="https://finder.api.mf.marsflag.com/api/v1/finder_service/documents/592d8a31/search"
+                    serp-url="/insidesearch/index.html#/"
+                    doctype-hidden
+                    options-hidden
+                    placeholder="SEARCH"
+                    imgsize-default="1"
+                    ></mf-search-box>
+                </div>
+            </div>
+
+        </nav>
+        <ul class="lang_btn"><?php language_switcher(); ?></ul>
+        <div class="search_btn" data-view="pc"><span></span></div>
+        <div class="menu_btn" data-view="sp">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="top_logo">
+        <svg data-type="emblem"><use xlink:href="#logo_emblem"></use></svg>
+        <svg data-type="text" aria-label="NIKKA WWHISKY"><use xlink:href="#logo_text"></use></svg>
+    </div>
+  
+    <div id="fb-root"></div>
+</header>
