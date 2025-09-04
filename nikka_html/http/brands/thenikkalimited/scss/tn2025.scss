@@ -1,0 +1,905 @@
+@import "mq";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+#loader-bg {
+    // display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    background-color: #000;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1.0s ease;
+
+    @include sp {
+        min-height: 100vh;
+        height: -webkit-fill-available;
+    }
+}
+
+#loader {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    transform: scale(1);
+    transition: transform 2s ease;
+
+    @include sp {
+        width: get_vw(276);
+        height: get_vw(204);
+    }
+
+    @include pc {
+        width: 276px;
+        height: 204px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#loader-bg.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#loader.shrink {
+    transform: scale(0.9);
+}
+
+#tn2025 {
+    background-color: #000;
+    color: #fff;
+
+    @include sp {
+        padding-bottom: 25vw;
+    }
+
+    @include pc {
+        padding: 0 0 125px 0;
+    }
+
+    .inner {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include sp {
+            margin-left: get_vw(60);
+            margin-right: get_vw(60);
+            width: auto;
+        }
+
+        @include pc {
+            width: 1286px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h2,h3 {
+        font-family: "Noto Serif JP", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    p {
+        font-family: "Noto Sans JP", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .keyvisual {
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #000;
+
+        @include sp {
+            background-image: url(../images/kv_image_sp.png);
+            background-size: 100vw auto;
+        }
+
+        @include pc {
+            background-image: url(../images/kv_image@2x.jpg);
+            background-size: auto 760px;
+        }
+
+        .inner {
+            @include sp {
+                height: get_vw(1580);
+            }
+
+            @include pc {
+                height: 760px;
+            }
+
+            h1 {
+                @include sp {
+                    position: relative;
+                    width: get_vw(294);
+                    padding-top: get_vw(1051);
+                    margin: 0 auto;
+                }
+
+                @include pc {
+                    position: absolute;
+                    top: 258px;
+                    right: 93px;
+                    width: 211px;
+                }
+            }
+
+            .date {
+                @include sp {
+                    width: get_vw(568);
+                    margin: get_vw(58) auto 0 auto;
+                }
+
+                @include pc {
+                    position: absolute;
+                    top: 504px;
+                    right: 97px;
+                    width: 204px;
+                }
+            }
+
+            .maincopy {
+                position: absolute;
+
+                @include sp {
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    top: get_vw(64);
+                    width: get_vw(69);
+                }
+
+                @include pc {
+                    top: 96px;
+                    left: 256px;
+                    width: 67px;
+                }
+            }
+
+        }
+    }
+
+    .kv_bottom {
+        background-color: #92a6a9;
+        width: 100%;
+
+        p {
+            line-height: 1;
+            margin: 0 auto;
+
+            @include sp {
+                width: get_vw(544);
+                padding: get_vw(58) 0;
+            }
+
+            @include pc {
+                width: 437px;
+                padding: 40px 0;
+            }
+        }
+    }
+
+    .intro {
+        background-color: #020202;
+
+        @include sp {
+            background-image: url(../images/intro_bg_sp.jpg);
+            background-size: get_vw(768) auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+
+        @include pc {
+            background-image: url(../images/intro_bg@2x.jpg);
+            background-size: auto 860px;
+            background-position: center;
+        }
+
+        .inner {
+            @include sp {
+                padding: get_vw(120) 0 get_vw(110) 0;
+            }
+
+            @include pc {
+                box-sizing: border-box;
+                width: 1240px;
+                height: 860px;
+                padding-top: 130px;
+            }
+
+            h2 {
+                @include sp {
+                    font-size: get_vw(34);
+                    line-height: 1.75;
+                    margin-bottom: 98vw;
+                }
+
+                @include pc {
+                    font-size: 25px;
+                    line-height: 1.8;
+                    margin-bottom: 85px;
+                }
+            }
+
+            p {
+                @include sp {
+                    font-size: get_vw(24);
+                    line-height: 1.85;
+
+                }
+
+                @include pc {
+                    font-size: 16px;
+                    line-height: 2.18;
+                }
+            }
+        }
+    }
+
+    .large_image {
+        width: 100%;
+        clip-path: inset(0);
+
+        @include sp {
+            height: get_vw(600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @include pc {
+            height: 650px;
+        }
+
+        img {
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+
+            @include sp {
+                width: auto;
+                height: 100vh;
+            }
+
+            @include pc {
+                width: 100%;
+                height: auto;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .blenders {
+        @include sp {
+            background-image: url(../images/blenders_bg_sp.jpg);
+            background-color: #000;
+            background-position: center top;
+            background-size: 100vw auto;
+            background-repeat: no-repeat;
+        }
+
+        @include pc {
+            background-image: url(../images/blenders_bg@2x.jpg);
+            background-size: cover;
+            background-position: center top;
+        }
+
+        .inner {
+            @include sp {
+                padding: 0 0 get_vw(170) 0;
+            }
+
+            @include pc {
+                max-width: inherit;
+                width: 1286px;
+                padding: 0 0 240px 0;
+            }
+
+            section {
+                &#blenders{
+                    h2{
+                        @include sp{
+                            padding: get_vw(120) 0 get_vw(70) 0;
+                        }
+                        @include pc{
+                            padding: 190px 0 100px 0;
+                        }
+                    }
+                }
+                &#movie{
+                    h2{
+                        @include sp{
+                            padding: get_vw(215) 0 get_vw(70) 0;
+                        }
+                        @include pc{
+                            padding: 215px 0 100px 0;
+                        }
+                    }
+                }
+                h2{
+                    text-align: center;
+                    img{
+                        @include sp{
+                            width: auto;
+                            height: get_vw(30);
+                        }
+                        @include pc{
+                            width: auto;
+                            height: 30px;
+                        }
+                    }
+                }
+                .blender_wrap {
+                    @include pc {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    .blender_box {
+                        box-sizing: border-box;
+                        position: relative;
+
+                        @include sp {
+                            background-color: #000;
+                            background-position: center bottom;
+                            background-repeat: no-repeat;
+                            background-size: get_vw(650) auto;
+                            width: get_vw(650);
+                            height: get_vw(690);
+                            padding: get_vw(70) get_vw(50);
+                            transition: height 0.8s ease;
+                        }
+
+                        @include pc {
+                            background-size: contain;
+                            width: 622px;
+                            height: 752px;
+                            padding: 80px 70px;
+                        }
+
+                        & h3 {
+                            @include sp {
+                                font-size: get_vw(33);
+                                line-height: 1.8;
+                            }
+
+                            @include pc {
+                                font-size: 25px;
+                                line-height: 1.8;
+                                margin-bottom: 30px;
+                            }
+                        }
+
+                        .tx-box {
+                            @include sp {
+                                height: 0;
+                                padding-bottom: 0;
+                                opacity: 0;
+                                overflow: hidden;
+                                transition:1.0s ease;
+                            }
+                            @include pc{
+                                height: auto !important;
+                            }
+
+                            &.open {
+                                @include sp{
+                                    height: auto;
+                                    margin: get_vw(50) 0 0 0;
+                                    padding-bottom: get_vw(380);
+                                    opacity: 1;
+                                }
+                            }
+                            p {
+                                letter-spacing: 0.07em;
+                                text-align: justify;
+
+                                @include sp {
+                                    // height: 0;
+                                    font-size: get_vw(24);
+                                    line-height: 1.65;
+                                    transition: 0.5s;
+                                }
+
+                                @include pc {
+                                    font-size: 14.5px;
+                                    line-height: 1.8;
+                                    width: 350px;
+                                }
+                                &:nth-child(2){
+                                    @include sp{
+                                        margin-top: 0.75em;
+                                    }
+                                    @include pc{
+                                        margin-top: 0.75em;
+                                    }
+                                }
+                            }
+                            &.open{
+                                p{
+                                    @include sp{
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+
+
+                        .button {
+                            @include sp {
+                                border: 1px solid #fff;
+                                background-color: transparent;
+                                width: get_vw(280);
+                                height: auto;
+                                font-size: get_vw(24);
+                                display: block;
+                                text-align: center;
+                                padding: get_vw(20) 0;
+                                // opacity: 1;
+                                position: absolute;
+                                transition: 0.3s;
+                                top: 36vw;
+                            }
+
+                            @include pc {
+                                display: none;
+                            }
+
+                            &.active {
+                                opacity: 0;
+                                pointer-events: none;
+                            }
+                        }
+
+                        .sign {
+                            @include sp {
+                                position: absolute;
+                                bottom: get_vw(200);
+                                left: get_vw(50);
+                            }
+
+                            p {
+                                display: inline-block;
+
+                                @include sp {
+                                    font-size: get_vw(20);
+                                }
+                                @include pc{
+                                    font-size: 12px;
+                                }
+                            }
+
+                            img {
+                                display: block;
+                            }
+                        }
+
+                        &.ozaki {
+                            @include sp {
+                                background-image: url(../images/blender_ozaki_sp.jpg);
+                                margin-bottom: get_vw(70);
+                            }
+
+                            @include pc {
+                                background-image: url(../images/blender_ozaki@2x.jpg);
+                            }
+
+                            .sign {
+                                @include pc {
+                                    margin-top: 60px;
+                                }
+
+                                img {
+                                    @include sp {
+                                        width: get_vw(185);
+                                        margin: get_vw(15) 0 0 get_vw(50);
+                                    }
+
+                                    @include pc {
+                                        width: 162px;
+                                        margin: 5px 0 0 10px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.iseki {
+                            @include sp {
+                                background-image: url(../images/blender_iseki_sp.jpg);
+                            }
+
+                            @include pc {
+                                background-image: url(../images/blender_iseki@2x.jpg);
+                            }
+
+                            .sign {
+                                @include pc {
+                                    margin-top: 35px;
+                                }
+
+                                img {
+                                    @include sp {
+                                        width: get_vw(148);
+                                        margin: get_vw(15) 0 0 get_vw(70);
+                                    }
+
+                                    @include pc {
+                                        width: 138px;
+                                        margin: 5px 0 0 18px;
+                                    }
+                                }
+                            }
+
+                            .fadein {
+                                @include pc {
+                                    transition-delay: .6s;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .movie_wrap {
+                    @include pc {
+                        margin: 0 auto;
+                        width: 1064px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    &.disp_sp {
+                        @include pc {
+                            display: none;
+                        }
+                    }
+
+                    &.disp_pc {
+                        @include sp {
+                            display: none;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        border: none;
+                        margin: 0;
+                        padding: 0;
+
+                        @include sp {
+                            width: get_vw(400);
+
+                        }
+
+                        @include pc {
+                            width: 401px;
+                        }
+
+                        &.ozeki {
+                            @include sp {}
+                        }
+
+                        &.iseki {
+                            @include sp {
+                                margin-top: get_vw(125);
+                                margin-left: 36vw;
+                            }
+                        }
+
+                        img {
+                            display: block;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .bottom_container {
+        background-color: #000000;
+
+        @include sp {
+            background-image: url(../images/bottom_bg_sp.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: 100% auto;
+            padding: get_vw(135) 0 0 0;
+        }
+
+        @include pc {
+            background-image: url(../images/bottom_bg@2x.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: 2000px auto;
+
+        }
+
+        .lcopy {
+            font-family: "Noto Serif JP", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            text-align: center;
+            letter-spacing: 0.05em;
+
+            @include sp {
+                font-size: get_vw(27);
+                line-height: 2.1;
+            }
+
+            @include pc {
+                font-size: 24px;
+                letter-spacing: 0.18em;
+                line-height: 2.2;
+                padding: 180px 0 0 0;
+            }
+        }
+
+        .inner {
+            @include sp {
+                margin-left: get_vw(40);
+                margin-right: get_vw(40);
+            }
+
+
+            .tastingnote {
+                @include pc {
+                    margin-top: 85px;
+                }
+
+                h2 {
+                    position: relative;
+                    text-align: center;
+
+                    @include sp {
+                        border-bottom: 1px solid #fff;
+                        margin-top: 12vw;
+                        margin-bottom: get_vw(55);
+                        font-size: get_vw(25);
+                        padding-bottom: get_vw(20);
+                    }
+
+                    @include pc {
+                        font-size: 19px;
+                        letter-spacing: 0.2em;
+                        width: 690px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    &:before,
+                    &:after {
+                        @include pc {
+                            content: "";
+                            background-color: #fff;
+                            display: inline-block;
+                            position: absolute;
+                            height: 1px;
+                            width: 220px;
+                            top: 10px;
+                        }
+                    }
+
+                    &:before {
+                        left: 0;
+                    }
+
+                    &:after {
+                        right: 0;
+                    }
+                }
+
+                p {
+                    letter-spacing: 0.07em;
+
+                    @include sp {
+                        font-size: get_vw(24);
+                        line-height: 2.0;
+                    }
+
+                    @include pc {
+                        text-align: center;
+                        font-size: 16px;
+                        letter-spacing: 0.14em;
+                        line-height: 2.18;
+                        margin-top: 60px;
+                    }
+                }
+            }
+
+            .product {
+                position: relative;
+
+                @include sp {
+                    margin: get_vw(200) 0 0 0;
+                }
+
+                @include pc {
+                    width: 980px;
+                    min-height: 380px;
+                    margin-top: 170px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .product-image {
+                    @include sp {
+                        display: block;
+                        width: get_vw(330);
+                        margin: 0 auto;
+                    }
+
+                    @include pc {
+                        width: 260px;
+                        height: auto;
+                        position: absolute;
+                        top: 0;
+                        left: 38px;
+                    }
+                }
+
+                .text_wrap {
+                    @include sp {
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: get_vw(568);
+                    }
+
+                    @include pc {
+                        margin-left: 390px;
+                        padding-top: 55px;
+                    }
+
+                    .name {
+                        @include sp {
+                            display: block;
+                            width: get_vw(415);
+                            margin: get_vw(85) auto 0 auto;
+                        }
+
+                        @include pc {
+                            width: 401px;
+                        }
+                    }
+
+                    .releasedate {
+                        @include sp {
+                            display: block;
+                            width: get_vw(568);
+                            margin: get_vw(35) auto 0 auto;
+                        }
+
+                        @include pc {
+                            width: 548px;
+                            margin-top: 25px;
+                        }
+                    }
+
+                    .spec {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        @include sp {
+                            margin: get_vw(55) auto 0 auto;
+                        }
+
+                        @include pc {
+                            margin-top: 50px;
+                        }
+
+                        p {
+                            white-space: nowrap;
+
+                            @include sp {
+                                font-size: get_vw(22);
+                                width: get_vw(280);
+                            }
+
+                            @include pc {
+                                font-size: 17px;
+                                margin-top: 1em;
+                                width: 205px;
+                            }
+                        }
+                    }
+
+                    .small {
+                        letter-spacing: 0.1em;
+
+                        @include sp {
+                            font-size: get_vw(20);
+                            line-height: 1.25;
+                            margin-top: 1em;
+                        }
+
+                        @include pc {
+                            font-size: 12px;
+                            margin-top: 32px;
+                        }
+                    }
+                }
+
+            }
+
+            a.thenikka {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+
+                @include sp {
+                    margin-top: get_vw(90);
+                    width: get_vw(620);
+                }
+
+                @include pc {
+                    width: 690px;
+                    margin-top: 230px;
+                }
+            }
+
+        }
+    }
+}
+
+.fancybox__content {
+    @include sp {
+        width: get_vw(560) !important;
+        height: get_vw(980) !important;
+    }
+
+    @include pc {
+        width: 380px !important;
+        height: 670px !important;
+    }
+}
+
+/* テキスト fadein */
+.fadein {
+    transition: 0.6s;
+    transition-delay: .2s;
+    opacity: 0;
+
+    @include sp {
+        transform: translateY(get_vw(20));
+    }
+
+    @include pc {
+        transform: translateY(20px);
+    }
+
+    &.fadein-active {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+/* Fancybox全体のフォーカス枠を消す */
+.fancybox__container:focus,
+.fancybox__slide:focus,
+.fancybox__content:focus,
+.fancybox__content video:focus {
+    outline: none !important;
+}
+
+/* ChromeやSafariが自動で付けるfocusリングも消す */
+.fancybox__content video {
+    outline: none !important;
+    border: none !important;
+}
