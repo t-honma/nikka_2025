@@ -1,5 +1,5 @@
 @import "mq";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 
 #wrapper{
     background-color: #000;
@@ -17,8 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 1.0s ease;
-
+    transition: opacity 0.5s ease;
     @include sp {
         min-height: 100vh;
         height: -webkit-fill-available;
@@ -27,10 +26,10 @@
 
 #loader {
     text-align: center;
-    color: #1b1b1b;
+    color: #fff;
     z-index: 2;
     transform: scale(1);
-    transition: transform 2s ease;
+    transition: transform 1s ease;
 
     @include sp {
         width: get_vw(276);
@@ -54,7 +53,7 @@
 }
 
 #loader.shrink {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .breadcrumbs{
@@ -96,12 +95,17 @@
 #tn2025 {
     background-color: #000;
     color: #fff;
+
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
     @include sp {
         padding-bottom: 25vw;
     }
 
     @include pc {
-        padding: 0 0 125px 0;
+        padding: 0 0 250px 0;
     }
 
     .inner {
@@ -126,17 +130,14 @@
     }
 
     h2,h3 {
-        font-family: "Noto Serif JP", serif;
+        font-family: "Vollkorn", serif;
         font-optical-sizing: auto;
         font-weight: 400;
-        font-style: normal;
+        font-style: italic;
+        letter-spacing: 0.03em;
     }
 
     p {
-        font-family: "Noto Sans JP", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
     }
 
     .keyvisual {
@@ -166,48 +167,46 @@
             h1 {
                 @include sp {
                     position: relative;
-                    width: get_vw(294);
-                    padding-top: get_vw(1051);
+                    width: get_vw(355);
+                    padding-top: 139vw;
                     margin: 0 auto;
                 }
 
                 @include pc {
                     position: absolute;
-                    top: 258px;
-                    right: 93px;
-                    width: 211px;
+                    top: 305px;
+                    right: 68px;
+                    width: 242px;
                 }
             }
 
-            .date {
-                @include sp {
-                    width: get_vw(568);
-                    margin: get_vw(58) auto 0 auto;
-                }
+            // .date {
+            //     @include sp {
+            //         width: get_vw(568);
+            //         margin: get_vw(58) auto 0 auto;
+            //     }
 
-                @include pc {
-                    position: absolute;
-                    top: 504px;
-                    right: 97px;
-                    width: 204px;
-                }
-            }
+            //     @include pc {
+            //         position: absolute;
+            //         top: 504px;
+            //         right: 97px;
+            //         width: 204px;
+            //     }
+            // }
 
             .maincopy {
                 position: absolute;
 
                 @include sp {
-                    margin: auto;
-                    left: 0;
-                    right: 0;
-                    top: get_vw(64);
-                    width: get_vw(69);
+                    left: -2.5vw;
+                    top: 15.5vw;
+                    width: get_vw(668);
                 }
 
                 @include pc {
-                    top: 96px;
-                    left: 256px;
-                    width: 67px;
+                    top: 363px;
+                    left: 10px;
+                    width: 496px;
                 }
             }
 
@@ -223,12 +222,12 @@
             margin: 0 auto;
 
             @include sp {
-                width: get_vw(544);
-                padding: get_vw(58) 0;
+                width: get_vw(494);
+                padding: get_vw(45) 0;
             }
 
             @include pc {
-                width: 437px;
+                width: 598px;
                 padding: 40px 0;
             }
         }
@@ -264,28 +263,38 @@
 
             h2 {
                 @include sp {
-                    font-size: get_vw(34);
+                    font-size: 4.0vw;
                     line-height: 1.75;
-                    margin-bottom: 98vw;
+                    margin-bottom: 90.5vw;
+                    letter-spacing: 0.02em;
                 }
 
                 @include pc {
                     font-size: 25px;
-                    line-height: 1.8;
-                    margin-bottom: 85px;
+                    line-height: 1.75;
+                    margin-bottom: 58px;
                 }
             }
 
             p {
                 @include sp {
-                    font-size: get_vw(24);
-                    line-height: 1.85;
+                    font-size: get_vw(25);
+                    line-height: 1.8;
+                    letter-spacing: 0.05em;
+                    text-align: justify;
 
                 }
-
                 @include pc {
                     font-size: 16px;
-                    line-height: 2.18;
+                    line-height: 1.85;
+                    letter-spacing: 0.01em;
+                    width: 530px;
+                }
+                .spacer{
+                    @include pc{
+                        display: block;
+                        font-size: 50%;
+                    }
                 }
             }
         }
@@ -368,7 +377,7 @@
                             padding: get_vw(215) 0 get_vw(70) 0;
                         }
                         @include pc{
-                            padding: 215px 0 100px 0;
+                            padding: 215px 0 115px 0;
                         }
                     }
                 }
@@ -377,11 +386,11 @@
                     img{
                         @include sp{
                             width: auto;
-                            height: get_vw(30);
+                            height:3.5vw;
                         }
                         @include pc{
                             width: auto;
-                            height: 30px;
+                            height: 24px;
                         }
                     }
                 }
@@ -409,18 +418,18 @@
                             background-size: contain;
                             width: 622px;
                             height: 752px;
-                            padding: 80px 70px;
+                            padding: 65px 70px;
                         }
 
                         & h3 {
                             @include sp {
                                 font-size: get_vw(33);
-                                line-height: 1.8;
+                                line-height: 1.65;
                             }
 
                             @include pc {
-                                font-size: 25px;
-                                line-height: 1.8;
+                                font-size: 24px;
+                                line-height: 1.65;
                                 margin-bottom: 30px;
                             }
                         }
@@ -447,19 +456,25 @@
                             }
                             p {
                                 letter-spacing: 0.07em;
-                                text-align: justify;
 
                                 @include sp {
                                     // height: 0;
-                                    font-size: get_vw(24);
+                                    font-size: get_vw(25);
                                     line-height: 1.65;
                                     transition: 0.5s;
                                 }
 
                                 @include pc {
-                                    font-size: 14.5px;
-                                    line-height: 1.8;
+                                    font-size: 16px;
+                                    letter-spacing: 0;
+                                    line-height: 1.55;
                                     width: 350px;
+                                }
+                                .spacer{
+                                    display: block;
+                                    @include pc{
+                                        font-size: 50%;
+                                    }
                                 }
                                 &:nth-child(2){
                                     @include sp{
@@ -478,7 +493,6 @@
                                 }
                             }
                         }
-
 
                         .button {
                             @include sp {
@@ -509,18 +523,26 @@
                         .sign {
                             @include sp {
                                 position: absolute;
-                                bottom: get_vw(200);
+                                bottom: 23vw;
                                 left: get_vw(50);
+                            }
+                            @include pc{
+                                margin-top: 30px;
                             }
 
                             p {
                                 display: inline-block;
+                                font-family: "Vollkorn", serif;
+                                font-optical-sizing: auto;
+                                font-weight: 400;
+                                font-style: italic;
+                                letter-spacing: 0.03em;
 
                                 @include sp {
-                                    font-size: get_vw(20);
+                                    font-size: get_vw(24);
                                 }
                                 @include pc{
-                                    font-size: 12px;
+                                    font-size: 16px;
                                 }
                             }
 
@@ -541,7 +563,7 @@
 
                             .sign {
                                 @include pc {
-                                    margin-top: 60px;
+                                    margin-top: 30px;
                                 }
 
                                 img {
@@ -552,7 +574,7 @@
 
                                     @include pc {
                                         width: 162px;
-                                        margin: 5px 0 0 10px;
+                                        margin: 18px 0 0 10px;
                                     }
                                 }
                             }
@@ -567,9 +589,19 @@
                                 background-image: url(../images/blender_iseki@2x.jpg);
                             }
 
+                            .tx-box{
+                                .tx-box-inner{
+                                    p{
+                                        @include pc{
+                                            width: 340px;
+                                        }
+                                    }
+                                }
+                            }
+
                             .sign {
                                 @include pc {
-                                    margin-top: 35px;
+                                    margin-top: 52px;
                                 }
 
                                 img {
@@ -580,7 +612,7 @@
 
                                     @include pc {
                                         width: 138px;
-                                        margin: 5px 0 0 18px;
+                                        margin: 18px 0 0 18px;
                                     }
                                 }
                             }
@@ -667,34 +699,47 @@
             background-repeat: no-repeat;
             background-position: center top;
             background-size: 2000px auto;
+            padding-top: 210px;
 
         }
 
         .lcopy {
-            font-family: "Noto Serif JP", serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            text-align: center;
-            letter-spacing: 0.05em;
+            p{
+                font-family: "Vollkorn", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: italic;
+                text-align: center;
+                letter-spacing: 0.05em;
 
-            @include sp {
-                font-size: get_vw(27);
-                line-height: 2.1;
-            }
+                @include sp {
+                    font-size: get_vw(31.5);
+                    line-height: 1.5;
+                }
 
-            @include pc {
-                font-size: 24px;
-                letter-spacing: 0.18em;
-                line-height: 2.2;
-                padding: 180px 0 0 0;
+                @include pc {
+                    letter-spacing: 0.03em;
+
+                    font-size: 24px;
+                    line-height: 1.65;
+                }
+                .spacer{
+                    @include sp{
+                        display: block;
+                        font-size: 0;
+                    }
+                    @include pc{
+                        display: block;
+                        font-size:25%;
+                    }
+                }
             }
         }
 
         .inner {
             @include sp {
-                margin-left: get_vw(40);
-                margin-right: get_vw(40);
+                margin-left: 0;
+                margin-right: 0;
             }
 
 
@@ -704,19 +749,24 @@
                 }
 
                 h2 {
+                    font-family: "Lato", sans-serif;
+                    font-weight: 400;
+                    font-style: italic;
+                    letter-spacing: 0.03em;
+
                     position: relative;
                     text-align: center;
 
                     @include sp {
                         border-bottom: 1px solid #fff;
-                        margin-top: 12vw;
-                        margin-bottom: get_vw(55);
+                        margin:12vw get_vw(60) get_vw(55) get_vw(60);
                         font-size: get_vw(25);
                         padding-bottom: get_vw(20);
+                        letter-spacing: 0.18em;
                     }
 
                     @include pc {
-                        font-size: 19px;
+                        font-size: 18px;
                         letter-spacing: 0.2em;
                         width: 690px;
                         margin-left: auto;
@@ -731,7 +781,7 @@
                             position: absolute;
                             height: 1px;
                             width: 220px;
-                            top: 10px;
+                            top: 8px;
                         }
                     }
 
@@ -744,22 +794,103 @@
                     }
                 }
 
-                p {
-                    letter-spacing: 0.07em;
-
-                    @include sp {
-                        font-size: get_vw(24);
-                        line-height: 2.0;
-                    }
-
-                    @include pc {
-                        text-align: center;
-                        font-size: 16px;
-                        letter-spacing: 0.14em;
-                        line-height: 2.18;
-                        margin-top: 60px;
+                .tasting_container{
+                    @include sp{
+                        box-sizing: border-box;
+                        width: 100%;
+                        overflow-x: scroll;
                     }
                 }
+
+                .tasting_wrap{
+                    @include sp{
+                        display: -webkit-box;
+                        flex-shrink: 0;
+                        padding: 0 0 get_vw(30) 0;
+                        box-sizing: border-box;
+                    }
+                    @include pc{
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 65px auto 0 auto;
+                        width: 975px;
+                    }
+                    .tasting_box{
+                        @include sp{
+                            width: get_vw(390) !important;
+                        }
+                        @include pc{
+                            width: 252px;
+                        }
+                        &:first-of-type
+                        {
+                            @include sp{
+                                padding-left: get_vw(60);
+                            }
+                        }
+                        &:last-of-type{
+                            @include sp{
+                                padding-right: get_vw(60);
+                            }
+                        }
+                        &:nth-of-type(2){
+                            @include sp{
+                                padding: 0 get_vw(40);
+                            }
+                        }
+                        h3{
+                            border-bottom: 1px solid #fff;
+                            font-family: "Lato", sans-serif;
+                            font-weight: 400;
+                            font-style: italic;
+                            text-align: center;
+                            margin: 0 auto;
+                            @include sp{
+                                width: get_vw(140);
+                                letter-spacing: 0.3em;
+                                padding-bottom: 0.5vw;
+                            }
+                            @include pc{
+                                font-size: 15px;
+                                font-style: italic;
+                                letter-spacing: 0.25em;
+                                padding-bottom: 5px;
+                                width: 90px;
+                            }
+                        }
+                        p{
+                            text-align: center;
+                            @include sp{
+                                font-size: get_vw(20);
+                                line-height: 1.7;
+                                margin-top: 2em;
+                            }
+                            @include pc{
+                                font-size: 13px;
+                                letter-spacing: 0.05em;
+                                line-height: 1.65;
+                                margin-top: 25px;
+                            }
+                        }
+                    }
+                }
+
+                // p {
+                //     letter-spacing: 0.07em;
+
+                //     @include sp {
+                //         font-size: get_vw(24);
+                //         line-height: 2.0;
+                //     }
+
+                //     @include pc {
+                //         text-align: center;
+                //         font-size: 16px;
+                //         letter-spacing: 0.14em;
+                //         line-height: 2.18;
+                //         margin-top: 60px;
+                //     }
+                // }
             }
 
             .product {
@@ -770,11 +901,13 @@
                 }
 
                 @include pc {
-                    width: 980px;
-                    min-height: 380px;
-                    margin-top: 170px;
+                    width: 680px;
+                    margin-top: 280px;
                     margin-left: auto;
                     margin-right: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                 }
 
                 .product-image {
@@ -785,11 +918,24 @@
                     }
 
                     @include pc {
+                        display: block;
                         width: 260px;
                         height: auto;
-                        position: absolute;
-                        top: 0;
-                        left: 38px;
+                        margin-left: 25px;
+                    }
+                }
+                .logo{
+                    @include sp{
+                        width: get_vw(356);
+                        margin: get_vw(118) auto 0;
+                    }
+                    @include pc{
+                        margin-top: 30px;
+                        width: 266px;
+                    }
+                    img{
+                        width: 100%;
+                        height: auto;
                     }
                 }
 
@@ -813,7 +959,7 @@
                         }
 
                         @include pc {
-                            width: 401px;
+                            width: 548px;
                         }
                     }
 
@@ -831,6 +977,11 @@
                     }
 
                     .spec {
+                        font-family: "Noto Sans JP", sans-serif;
+                        font-optical-sizing: auto;
+                        font-weight: 400;
+                        font-style: normal;
+
                         display: flex;
                         flex-wrap: wrap;
 
@@ -941,4 +1092,18 @@
 .fancybox__content video {
     outline: none !important;
     border: none !important;
+}
+
+// slick
+// .slick-list{
+//     overflow: visible !important;
+//     padding: 0 !important;
+// }
+.slick-track{
+    // @include sp{
+    //     width: 710px !important;
+    // }
+}
+.slider > .tasting_box:not(:first-child) {
+    display: none;
 }
