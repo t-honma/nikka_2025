@@ -1,263 +1,395 @@
 <!DOCTYPE html>
 <html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>ザ・ニッカ リミテッド｜NIKKA WHISKY</title>
+        <meta name="description" content="挑戦を、継承する。新旧ふたりのチーフブレンダーの共創。「ザ・ニッカ リミテッド」今こそ世に問うワールドブレンデッド。" />
 
-  <title>ザ・ニッカ リミテッド｜NIKKA WHISKY</title>
-  <meta name="description" content="挑戦を、継承する。新旧ふたりのチーフブレンダーの共創。「ザ・ニッカ リミテッド」今こそ世に問うワールドブレンデッド。">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.nikka.com/brands/thenikkalimited/" />
+        <meta property="og:title" content="ザ・ニッカ リミテッド｜NIKKA WHISKY" />
+        <meta property="og:description" content="挑戦を、継承する。新旧ふたりのチーフブレンダーの共創。「ザ・ニッカ リミテッド」今こそ世に問うワールドブレンデッド。" />
+        <meta property="og:image" content="https://www.nikka.com/brands/thenikkalimited/images/tn2025_ogp.jpg" />
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.nikka.com/brands/thenikkalimited/">
-  <meta property="og:title" content="ザ・ニッカ リミテッド｜NIKKA WHISKY">
-  <meta property="og:description" content="挑戦を、継承する。新旧ふたりのチーフブレンダーの共創。「ザ・ニッカ リミテッド」今こそ世に問うワールドブレンデッド。">
-  <meta property="og:image" content="https://www.nikka.com/brands/thenikkalimited/images/tn2025_ogp.jpg">
+        <meta name="twitter:card" content="summary_large_image" />
 
-  <meta name="twitter:card" content="summary_large_image" />
+        <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/head_links.html'; ?>
 
-  <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/head_links.html'; ?>
+        <link rel="stylesheet" href="/common/css/reset.css" />
+        <link rel="stylesheet" href="/common/css/style.css" />
 
-  <link rel="stylesheet" href="/common/css/reset.css">
-  <link rel="stylesheet" href="/common/css/style.css">
+        <!--▼ ページ固有のcssここから ▼-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@4.1.1/dist/css/yakuhanjp.css" />
+        <link rel="stylesheet" href="css/tn2025.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+        <!--▲ ページ固有のcssここまで ▲-->
+    </head>
 
-  <!--▼ ページ固有のcssここから ▼-->
-  <link rel="stylesheet" href="css/tn2025.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-  <!--▲ ページ固有のcssここまで ▲-->
+    <!--▼ デフォルトのページトップボタンを使用しない場合はbodyタグに「 data-pagetop="custom"」を付与 ▼-->
 
-</head>
+    <body data-type="RN2024">
+        <!-- wrapper start -->
+        <div id="wrapper">
+            <!---------------------------- header start ---------------------------->
+            <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/head.tmp.html'; ?>
+            <!----------------------------- header end ----------------------------->
 
-<!--▼ デフォルトのページトップボタンを使用しない場合はbodyタグに「 data-pagetop="custom"」を付与 ▼-->
+            <!-- contents start -->
+            <main>
+                <!---------------------------- breadcrumbs start ---------------------------->
+                <div class="breadcrumbs">
+                    <div class="inner" data-type="wide">
+                        <?php breadcrumbs(); ?>
+                    </div>
+                </div>
+                <!----------------------------- breadcrumbs end ----------------------------->
 
-<body data-type="RN2024">
+                <div class="contents">
+                    <!--▼ コンテンツエリアここから ▼-->
 
-  <!-- wrapper start -->
-  <div id="wrapper">
+                    <!-- loading -->
+                    <div id="loader-bg">
+                        <div id="loader">
+                            <img src="images/loading@2x.png" alt="THE NIKKA LIMITED 2025" />
+                        </div>
+                    </div>
 
-    <!---------------------------- header start ---------------------------->
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/head.tmp.html'; ?>
-    <!----------------------------- header end ----------------------------->
+                    <div id="tn2025">
+                        <div class="keyvisual">
+                            <div class="inner">
+                                <h1><img src="images/kv_logo@2x.png" alt="ザ・ニッカ リミテッド" /></h1>
+                                <p class="date">
+                                    <img src="images/kv_releasedate@2x.png" alt="2026.2.3(Tue)" />
+                                </p>
+                                <p class="limited">
+                                    <img src="images/kv_limited@2x.png" alt="数量限定発売" />
+                                </p>
+                                <p class="maincopy"><img src="images/kv_copy@2x.png" alt="挑戦を、継承する。新旧ふたりのチーフブレンダーの共創。" width="67" height="481" /></p>
+                            </div>
+                        </div>
+                        <div class="kv_bottom">
+                            <p>
+                                <img src="images/kv_copy_bottom@2x.png" alt="これが、終わりなき探究の現在地。" width="426" height="24" />
+                            </p>
+                        </div>
 
-    <!-- contents start -->
-    <main>
+                        <div id="pageNav" class="">
+                            <ul>
+                                <li>
+                                    <a href="#interview"><img src="images/gnavi_interview@2x.png" alt="Interview ブレンダーインタビュー" /></a>
+                                </li>
+                                <li>
+                                    <a href="#blenders"><img src="images/gnavi_blenders@2x.png" alt="Our Blenders ブレンダーコメント" /></a>
+                                </li>
+                                <li>
+                                    <a href="#tastingnote"><img src="images/gnavi_tastingnote@2x.png" alt="Tasting Note テイスティングノート" /></a>
+                                </li>
+                            </ul>
+                        </div>
 
-      <!---------------------------- breadcrumbs start ---------------------------->
-      <div class="breadcrumbs">
-        <div class="inner" data-type="wide">
-          <?php breadcrumbs(); ?>
+                        <div class="intro">
+                            <div class="inner">
+                                <h2 class="fadein">
+                                    過去を受けとめ、現在を愉しみ、<br class="disp_sp" />未来へつなぐ。<br />
+                                    新旧交代の今こそ、<br class="disp_sp" />世に問うワールドブレンデッド。
+                                </h2>
+                                <p class="fadein">
+                                    先人から受け継いだ仕事をやり遂げて次代に渡す者と、<br class="disp_pc" />その仕事を受けとめさらに未来へつないでいく者。<br />
+                                    前チーフブレンダー 尾崎裕美と、現チーフブレンダー 井関潤治。<br />
+                                    それぞれ異なる道を歩みつつ、<br class="disp_pc" />ウイスキーづくりの技術とサイエンス、<br class="disp_pc" />人智を超えた原酒の変貌を探究しつづけてきた。<br />
+                                    &nbsp;<br />
+                                    今だからこそ、このふたりだからこそ成し得た幸せな仕事。<br />
+                                    ニッカウヰスキーの探究の現在地が、ここにある。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="profile">
+                            <div class="inner">
+                                <div class="movie_container">
+                                    <div class="movie_wrap osaki fadein">
+                                        <a data-fancybox href="images/mp4/movie_Osaki.mp4" class="ozaki"><img src="images/movie_ozaki_thumb@2x.jpg" alt="Play Movie" /></a>
+                                    </div>
+                                    <div class="movie_wrap iseki fadein">
+                                        <a data-fancybox href="images/mp4/movie_Iseki.mp4" class="ozaki"><img src="images/movie_iseki_thumb@2x.jpg" alt="Play Movie" /></a>
+                                    </div>
+                                </div>
+
+                                <div class="profile_wrap ozaki fadein">
+                                    <img src="images/profile_photo_ozaki@2x.jpg" alt="" class="photo" />
+                                    <p class="name">尾崎 裕美<span class="kana">おざき　ひろみ</span></p>
+                                    <p>1988年ニッカウヰスキーに入社し、研究所に配属され酒類製造の技術開発に携わる。その後、アサヒビール酒類研究所にてRTD、焼酎等の商品開発、ニッカ栃木工場及び仙台工場(現：仙台 宮城峡蒸溜所)の品質管理部長、本社原料部長を歴任。2019年ブレンダー室長、2021年チーフブレンダーに任命され、2025年よりシニアブレンダーとなる。</p>
+                                </div>
+
+                                <div class="profile_wrap iseki fadein">
+                                    <img src="images/profile_photo_iseki@2x.jpg" alt="" class="photo" />
+                                    <p class="name">井関 潤治<span class="kana">いせき　じゅんじ</span></p>
+                                    <p>1996年アサヒビール株式会社に入社し、ビールの製造と開発に携わった後、2001年よりニッカウヰスキーブレンダー室へ出向。<br />北海道工場(現：北海道 余市蒸溜所)での製造部長やニッカウヰスキー本社にて生産戦略立案や原材料調達などで経験を積み、2023年にブレンダー室長。2025年、チーフブレンダーに就任。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="interview" class="interview">
+                            <div class="inner">
+                                <div class="topic_contaier swiperModalButton">
+                                    <button class="topic_wrap fadein modalOpen" data-modal="1">
+                                        <img src="images/interview_topic001@2x.jpg" alt="熟した杏のように甘い香り。それは、若き日に自分が携わった研究の成果だった。" />
+                                    </button>
+                                    <button class="topic_wrap fadein modalOpen" data-modal="2">
+                                        <img src="images/interview_topic002@2x.jpg" alt="自らの原点、余市での日々。託した挑戦が、時を経て別格の個性を現した。" />
+                                    </button>
+                                    <button class="topic_wrap fadein modalOpen" data-modal="3">
+                                        <img src="images/interview_topic003@2x.jpg" alt="ウイスキーの聖地で生まれた余市・宮城峡原酒と異なる香り。ベン・ネヴィスの衝撃。" />
+                                    </button>
+                                    <button class="topic_wrap fadein modalOpen" data-modal="4">
+                                        <img src="images/interview_topic004@2x.jpg" alt="1+1が10にも100にもなる。新グレーン開発で再認識したブレンドの魅力。" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="blenders" class="blenders">
+                            <div class="inner">
+                                <section id="blenders">
+                                    <h2 class="fadein"><img src="images/blenders_himg@2x.png" alt="OUR BLENDERS" /></h2>
+                                    <div class="blender_wrap">
+                                        <div class="blender_box ozaki">
+                                            <h3 class="fadein">
+                                                自らの挑戦が時を経て<br />
+                                                共創に活かされたことに、<br />
+                                                深い歓びを感じます。
+                                            </h3>
+                                            <span class="button fadein">READ MORE</span>
+                                            <div class="tx-box">
+                                                <div class="tx-box-inner fadein">
+                                                    <p>このザ・ニッカ リミテッドでは、私が醗酵技術の開発に携わった、杏のような魅惑的な香りを放つ宮城峡モルトが大きな役割を果たしています。</p>
+                                                    <p>200周年を迎えたベン・ネヴィス蒸溜所のやわらかく膨らみのある原酒とともに、程よくピートの効いた余市モルトと調和し、全体に甘さとやわらかさを与えつつも綺麗にまとまり過ぎない、複雑な個性をつくりあげることができました。</p>
+                                                </div>
+                                            </div>
+                                            <div class="sign fadein">
+                                                <p>前チーフブレンダー　尾崎裕美</p>
+                                                <img src="images/sign_ozaki@2x.png" alt="前チーフブレンダー　尾崎裕美" class="" />
+                                            </div>
+                                        </div>
+
+                                        <div class="blender_box iseki">
+                                            <h3 class="fadein">
+                                                挑戦を止めない<br />
+                                                ニッカウヰスキーの想いを、<br />
+                                                この逸品に結晶させました。
+                                            </h3>
+                                            <span class="button fadein">READ MORE</span>
+                                            <div class="tx-box">
+                                                <div class="tx-box-inner fadein">
+                                                    <p>数量限定のため、ブレンドに自由で多様な選択肢が与えられた中で特にユニークなのは水楢新樽モルト。アメリカンオークの新樽モルトと異なり、青竹のような清々しさに驚かされます。</p>
+                                                    <p>余市モルトでありながら熱帯の果実の香り立つ原酒、かつてない試みに果敢に挑んだ新しいグレーン原酒なども特徴的です。多彩な原酒で構築した複雑さがありながら、飲みやすさもあるブレンデッドに仕上げました。</p>
+                                                </div>
+                                            </div>
+                                            <div class="sign fadein">
+                                                <p>現チーフブレンダー　井関潤治</p>
+                                                <img src="images/sign_iseki@2x.png" alt="現チーフブレンダー　井関潤治" class="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <div id="tastingnote" class="bottom_container">
+                            <p class="lcopy fadein">
+                                清々しく香る水楢新樽モルト、甘く誘う宮城峡モルト、<br />
+                                膨らみのあるベン・ネヴィスモルト、<br />
+                                トロピカルな余市モルト、新たな挑戦によるグレーン。<br />
+                                多彩な個性が、豊かに調和する。
+                            </p>
+
+                            <div class="inner">
+                                <div class="tastingnote">
+                                    <h2 class="fadein">テイスティングノート</h2>
+                                    <p class="fadein">
+                                        潮風を思わせるピートの香り、キャラメリゼしたクレームブリュレのような香ばしい甘さと共に、<br class="disp_pc" />胡麻の深みを感じる樽香と、青竹にも似た清冽な樽香が心地よく調和。<br />
+                                        ワクシーなニュアンスが全体を包み込み、霞のかかった森のような印象を与えます。<br />
+                                        フルーティーな甘さと、ダークチョコレートのようなビター感の中に<br class="disp_pc" />樽由来のウッディさが重なる、やわらかな厚みのある味わい。<br />
+                                        穏やかなピートのコクと、ドライフルーツを思わせる甘さが心地よく続きます。
+                                    </p>
+                                </div>
+
+                                <div class="product">
+                                    <img src="images/bottom_product.png" alt="" class="product-image" />
+                                    <div class="text_wrap">
+                                        <p class="name fadein"><img src="images/bottom_logo@2x.png" alt="ザ・ニッカ リミテッド" /></p>
+                                        <p class="releasedate fadein">
+                                            <img src="images/product_releasedate@2x.png" class="date" alt="2026.2.3(Tue)" />
+
+                                            <img src="images/bottom_limited@2x.png" alt="数量限定発売" class="limited" />
+                                        </p>
+
+                                        <div class="spec fadein">
+                                            <p>容量 　700ml</p>
+                                            <p>アルコール分　　48%</p>
+                                            <p>参考小売価格（税抜）</p>
+                                            <p>150,000円</p>
+                                        </div>
+                                        <p class="small">※参考小売価格は、お特約店様・ご販売店様の自主的な価格設定を拘束するものではありません。</p>
+                                    </div>
+                                </div>
+
+                                <a href="/products/blended/thenikka/" class="thenikka"><img src="images/240529_tn na_banner@2x.jpg" alt="THE NIKKA" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /tn2025 -->
+
+                    <!-- モーダル -->
+                    <div class="modal" id="modal">
+                        <div class="modal__overlay modalClose"></div>
+                        <div class="modal__content">
+                            <div class="modal_inner">
+                                <div class="modal__close-btn modalClose" aria-label="閉じる"><span class="lineClose"></span></div>
+                                <div class="swiper-pagination"></div>
+                                <!-- スライダー -->
+                                <div id="modal-swiper" class="swiper modalInSlider">
+                                    <div class="swiper-wrapper">
+                                        <!-- 01 -->
+                                        <div class="swiper-slide modalInSlider">
+                                            <div class="slide_wrap">
+                                                <div class="slide_wrap_inner">
+                                                    <img src="images/modal/topic_01_photo@2x.jpg" alt="" class="photo_pc disp_pc" />
+                                                    <div class="text_wrap">
+                                                        <span class="tag discovery">
+                                                            <img src="images/modal/h_discovery@2x.png" alt="DISCOVERY" />
+                                                        </span>
+                                                        <p class="title">
+                                                            熟した杏のように甘い香り。<br />
+                                                            それは、若き日に自分が携わった研究の成果だった。
+                                                        </p>
+                                                        <p class="txt_body">
+                                                            私は入社後すぐ、醸造における酵母の培養や醗酵条件の研究を担当していました。いろいろな挑戦に関わりましたが、その中でも特にチャレンジングだったのが、熟したボディ感のあるフルーツの香りがする原酒を目指す醗酵研究です。それまでフルーティーと言えばりんごやパイナップルなどフレッシュな香りがほとんどで、目標はそれとまったく異なるリッチで厚みがある香り。酵母選びから携わりましたが醗酵は非常に繊細なものですし、原酒の熟成には時間がかかりますから、すぐに成果が出るわけではありません。その後私は他の部署に異動になり、仲間に託した研究はその後も受け継がれました。
+                                                            <img src="images/modal/topic_01_photo@2x.jpg" class="photo_sp disp_sp" alt="" />
+                                                            <span class="spacer disp_pc">&nbsp;</span>
+                                                            熟成具合の確認は度々行っていましたが、宮城峡蒸溜所で仕込まれた杏のような香りの原酒に、ブレンダーとして出会えたのはずっと後のことです。私が携わった研究を引き継ぎ、原酒を仕込んで熟成を見守ってきてくれた後人たちへの深い感謝と感慨が、胸に溢れました。
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 02 -->
+                                        <div class="swiper-slide modalInSlider">
+                                            <div class="slide_wrap">
+                                                <div class="slide_wrap_inner">
+                                                    <img src="images/modal/topic_02_photo@2x.jpg" alt="" class="photo_pc disp_pc" />
+                                                    <div class="text_wrap">
+                                                        <span class="tag achievement">
+                                                            <img src="images/modal/h_achievement@2x.png" alt="ACHIEVEMENT" />
+                                                        </span>
+                                                        <p class="title">自らの原点、余市での日々。<br />託した挑戦が、時を経て<br class="disp_sp" />別格の個性を現した。</p>
+                                                        <p class="txt_body">
+                                                            私のキャリアはアサヒビールで始まり、ビールの研究開発を担当していたこともあり、ウイスキーについてはブレンダー室に行くまで、ほとんど知りませんでした。ブレンダーに着任して驚いたのは、ウイスキー原酒のバラエティーの多さです。さらに、その原酒をブレンドして無限の味わいを生み出すこと、その原酒をつくり残してくれた諸先輩方のように多くの原酒を後輩に残していくことが自分の使命である、と痛感しました。ブレンダーとして2010年まで余市での各種試験製造や製造原酒品質報告書を通じて余市原酒製造に関わり、その後2017年までは余市蒸溜所の製造部長として、実際の原酒製造に関わりました。
+                                                            <img src="images/modal/topic_02_photo@2x.jpg" class="photo_sp disp_sp" alt="" />
+                                                            <span class="spacer disp_pc">&nbsp;</span>
+                                                            余市の原酒には思い入れの深いものが数多くあります。今回使用したトロピカルな甘さと厚みのある余市原酒は、私が余市にいた時に、ニッカウヰスキー所有の酵母ストックから地道に試作試験をして特徴的な香気を醸し出す酵母を選抜したことが発端で生まれ、その後余市蒸溜所やブレンダー室の担当者が引き継いで完成してくれたものです。膨大な原酒の多くを活かすべきザ・ニッカの限定品だからこそ、この個性的な原酒も採用したいと考えたのです。
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 03 -->
+                                        <div class="swiper-slide modalInSlider">
+                                            <div class="slide_wrap">
+                                                <div class="slide_wrap_inner">
+                                                    <img src="images/modal/topic_03_photo@2x.jpg" alt="" class="photo_pc disp_pc" />
+                                                    <div class="text_wrap">
+                                                        <span class="tag journey">
+                                                            <img src="images/modal/h_journey@2x.png" alt="JOURNEY" />
+                                                        </span>
+                                                        <p class="title journey">ウイスキーの聖地で生まれた<br class="disp_sp" />余市・宮城峡原酒と異なる香り。<br />ベン・ネヴィスの衝撃。</p>
+                                                        <p class="txt_body">
+                                                            1989年にニッカウヰスキーグループの一員になったスコットランドの西ハイランドにあるベン・ネヴィス蒸溜所は、2025年に記念すべき200周年を迎えました。創業者・竹鶴政孝が単身ウイスキーづくりを学んだスコットランドの地で長い伝統を持つ蒸溜所と、数十年にわたり強い絆を育んできたことは、ニッカウヰスキーにとって大きな意義があります。
+                                                            <img src="images/modal/topic_03_photo@2x.jpg" class="photo_sp disp_sp" alt="" />
+                                                            <span class="spacer disp_pc">&nbsp;</span>
+                                                            私がベン・ネヴィス蒸溜所の実力を知ったのは、最初にブレンダー室に配属になり、先輩のブレンダーと一緒にベン・ネヴィス原酒をテイスティングした時のことです。その中には、余市や宮城峡とは明らかに違う、スコットランドの原酒らしい個性が感じられる原酒がいくつか存在しました。今回のブレンドにはベン・ネヴィス原酒を数種類使用していますが、中でもザ・ニッカ
+                                                            リミテッドの複雑な個性に寄与しているのは、フルーティーな膨らみとワクシーさのある、ユニークな原酒です。ベン・ネヴィス蒸溜所の原酒は、私たちのウイスキーづくりにとって重要な働きをしているのです。
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 04 -->
+                                        <div class="swiper-slide modalInSlider">
+                                            <div class="slide_wrap">
+                                                <div class="slide_wrap_inner">
+                                                    <img src="images/modal/topic_04_photo@2x.jpg" alt="" class="photo_pc disp_pc" />
+                                                    <div class="text_wrap">
+                                                        <span class="tag innovation">
+                                                            <img src="images/modal/h_innovation@2x.png" alt="INNOVATION" />
+                                                        </span>
+                                                        <p class="title innovation">1+1が10にも100にもなる。<br />新グレーン開発で再認識した<br />ブレンドの魅力。</p>
+                                                        <p class="txt_body">
+                                                            このザ・ニッカ リミテッドには、ニッカウヰスキーが行ってきた数々の挑戦が活かされています。その中でも特に挑戦的な門司工場とさつま司蒸溜蔵のグレーンウイスキーに、私は原料調達から関わってきました。
+                                                            <img src="images/modal/topic_04_photo@2x.jpg" class="photo_sp disp_sp" alt="" />
+                                                            <span class="spacer disp_pc">&nbsp;</span>
+                                                            ニッカウヰスキーのグレーンの代表格は、今まではなんと言ってもカフェグレーンでした。創業者・竹鶴政孝が選んだ旧式の連続式蒸溜機によって生み出され、飲みやすさだけではなく、穀物由来の甘さや伸びをもたらすグレーンです。一方、門司とさつま司のグレーンは本来甘さよりもコクが際立つ酒質ですが、このカフェグレーンとブレンドすると互いの甘さを引き立てあうのです。これが、ただ「混ぜる」だけではない「ブレンド」の力であり、魅力です。受け継いできた膨大な原酒とともに新しい挑戦で原酒のバラエティを増やし、その可能性を最大限に活かしていく。これこそが、唯一無二の象徴的存在を表す“THE”を冠する、ザ・ニッカの使命だと思います。
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <!-- ここまで -->
+
+                    <div class="sp_navbtn"></div>
+                    <div class="spNav_wrap">
+                        <div id="spNav" class="sp">
+                            <ul>
+                                <li>
+                                    <a href="#top"><img src="images/spnavi_top.png" alt="" class="top" /></a>
+                                </li>
+                                <li>
+                                    <a href="#interview"><img src="images/spnavi_interview.png" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#blenders"><img src="images/spnavi_blenders.png" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#tastingnote"><img src="images/spnavi_tastingnote.png" alt="" /></a>
+                                </li>
+                            </ul>
+                            <span class="sp_close">
+                                <img src="images/sp_navbtn_close.png" alt="" />
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--▲ コンテンツエリアここまで ▲-->
+                </div>
+            </main>
+            <!-- contents end -->
+
+            <!---------------------------- footer start ---------------------------->
+            <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/foot.tmp.html'; ?>
+            <!----------------------------- footer end ----------------------------->
         </div>
-      </div>
-      <!----------------------------- breadcrumbs end ----------------------------->
+        <!-- wrapper end -->
 
-      <div class="contents">
-        <!--▼ コンテンツエリアここから ▼-->
+        <!--▼ ページ固有のjsここから ▼-->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+        <script src="js/tn2025.js"></script>
 
-        <!-- loading -->
-        <div id="loader-bg">
-          <div id="loader">
-            <img src="images/loading@2x.png" alt="THE NIKKA LIMITED 2025">
-          </div>
-        </div>
+        <!--▲ ページ固有のjsここまで ▲-->
 
-        <div id="tn2025">
-
-          <div class="keyvisual">
-            <div class="inner">
-              <h1><img src="images/kv_logo@2x.png" alt="ザ・ニッカ リミテッド"></h1>
-              <p class="date">
-                <picture>
-                  <source media="(max-width: 767px)" srcset="images/release_date_sp.png 767w" />
-                  <source media="(min-width: 768px)" srcset="images/release_date@2x.png 768w" />
-                  <img src="images/release_date@2x.png" alt="2025.11.25（Wed）数量限定発売" class="">
-                </picture>
-              </p>
-              <p class="maincopy"><img src="images/kv_copy@2x.png" alt="挑戦を、継承する。新旧ふたりのチーフブレンダーの共創。" width="67"
-                  height="481"></p>
-            </div>
-          </div>
-          <div class="kv_bottom">
-            <p>
-              <img src="images/kv_copy_bottom@2x.png" alt="これが、終わりなき探究の現在地。" width="426" height="24">
-            </p>
-          </div>
-
-          <div class="intro">
-            <div class="inner">
-              <h2 class="fadein">
-                過去を受けとめ、現在を愉しみ、<br class="disp_sp">未来へつなぐ。<br>
-                新旧交代の今こそ、<br class="disp_sp">世に問うワールドブレンデッド。
-              </h2>
-              <p class="fadein">
-                先人から受け継いだ仕事をやり遂げて次代に渡す者と、<br class="disp_pc">その仕事を受けとめさらに未来へつないでいく者。<br>
-                前チーフブレンダー 尾崎裕美と、現チーフブレンダー 井関潤治。<br>
-                それぞれ異なる道を歩みつつ、<br class="disp_pc">ウイスキーづくりの技術とサイエンス、<br class="disp_pc">人智を超えた原酒の変貌を探究しつづけてきた。<br>
-                &nbsp;<br>
-                今だからこそ、このふたりだからこそ成し得た幸せな仕事。<br>
-                ニッカウヰスキーの探究の現在地が、ここにある。
-              </p>
-            </div>
-          </div>
-
-          <div class="large_image">
-            <img src="images/large_img.jpg" alt="">
-          </div>
-
-          <div class="blenders">
-            <div class="inner">
-
-              <section id="blenders">
-                <h2 class="fadein"><img src="images/blenders_himg@2x.png" alt="OUR BLENDERS"></h2>
-                <div class="blender_wrap">
-                  <div class="blender_box ozaki">
-                    <h3 class="fadein">
-                      自らの挑戦が時を経て<br>
-                      共創に活かされたことに、<br>
-                      深い歓びを感じます。
-                    </h3>
-                    <span class="button fadein">READ MORE</span>
-                    <div class="tx-box">
-                      <div class="tx-box-inner fadein">
-                        <p>
-                          このザ・ニッカ リミテッドでは、私が醗酵技術の開発に携わった、杏のような魅惑的な香りを放つ宮城峡モルトが大きな役割を果たしています。
-                        </p>
-                        <p>
-                          200周年を迎えたベン・ネヴィス蒸溜所のやわらかく膨らみのある原酒とともに、程よくピートの効いた余市モルトと調和し、全体に甘さとやわらかさを与えつつも綺麗にまとまり過ぎない、複雑な個性をつくりあげることができました。
-                        </p>
-                      </div>
-
-                    </div>
-                    <div class="sign fadein">
-                      <p>前チーフブレンダー　尾崎裕美</p>
-                      <img src="images/sign_ozaki@2x.png" alt="前チーフブレンダー　尾崎裕美" class="">
-                    </div>
-                  </div>
-
-                  <div class="blender_box iseki">
-                    <h3 class="fadein">
-                      挑戦を止めない<br>
-                      ニッカウヰスキーの想いを、<br>
-                      この逸品に結晶させました。
-                    </h3>
-                    <span class="button fadein">READ MORE</span>
-                    <div class="tx-box">
-                      <div class="tx-box-inner fadein">
-                        <p>
-                          数量限定のため、ブレンドに自由で多様な選択肢が与えられた中で特にユニークなのは水楢新樽モルト。アメリカンオークの新樽モルトと異なり、青竹のような清々しさに驚かされます。
-                        </p>
-                        <p>
-                          余市モルトでありながら熱帯の果実の香り立つ原酒、かつてない試みに果敢に挑んだ新しいグレーン原酒なども特徴的です。多彩な原酒で構築した複雑さがありながら、飲みやすさもあるブレンデッドに仕上げました。
-                        </p>
-                      </div>
-                    </div>
-                    <div class="sign fadein">
-                      <p>現チーフブレンダー　井関潤治</p>
-                      <img src="images/sign_iseki@2x.png" alt="現チーフブレンダー　井関潤治" class="">
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section id="movie">
-                <h2 class="fadein"><img src="images/movie_himg@2x.png" alt="THE INTERVIEW"></h2>
-
-                <div class="movie_wrap disp_pc">
-                  <a data-fancybox href="images/mp4/ozaki.mp4" class="ozaki">
-                    <img src="images/movie_thumb_ozaki@2x.jpg" alt="">
-                  </a>
-                  <a data-fancybox href="images/mp4/iseki.mp4" class="iseki">
-                    <img src="images/movie_thumb_iseki@2x.jpg" alt="">
-                  </a>
-                </div>
-
-                <div class="movie_wrap disp_sp">
-                  <a href="https://www.instagram.com/p/DKCSBVGsWmE/" class="ozaki" target="_blank">
-                    <img src="images/movie_thumb_ozaki@2x.jpg" alt="">
-                  </a>
-                  <a href="https://www.instagram.com/p/DKPveNzMwWg/" class="iseki" target="_blank">
-                    <img src="images/movie_thumb_iseki@2x.jpg" alt="">
-                  </a>
-                </div>
-              </section>
-
-            </div>
-          </div>
-
-          <div class="bottom_container">
-            <p class="lcopy fadein">
-              清々しく香る水楢新樽モルト、甘く誘う宮城峡モルト、<br>
-              膨らみのあるベン・ネヴィスモルト、<br>
-              トロピカルな余市モルト、新たな挑戦によるグレーン。<br>
-              多彩な個性が、豊かに調和する。
-            </p>
-
-            <div class="inner">
-
-              <div class="tastingnote">
-                <h2 class="fadein">テイスティングノート</h2>
-                <p class="fadein">
-                  潮風を思わせるピートの香り、キャラメリゼしたクレームブリュレのような香ばしい甘さと共に、<br class="disp_pc">胡麻の深みを感じる樽香と、青竹にも似た清冽な樽香が心地よく調和。<br>
-                  ワクシーなニュアンスが全体を包み込み、霞のかかった森のような印象を与えます。<br>
-                  フルーティーな甘さと、ダークチョコレートのようなビター感の中に<br class="disp_pc">樽由来のウッディさが重なる、やわらかな厚みのある味わい。<br>
-                  穏やかなピートのコクと、ドライフルーツを思わせる甘さが心地よく続きます。
-                </p>
-              </div>
-
-              <div class="product">
-                <img src="images/bottom_product.png" alt="" class="product-image">
-                <div class="text_wrap">
-                  <p class="name fadein"><img src="images/bottom_logo@2x.png" alt="ザ・ニッカ リミテッド"></p>
-                  <p class="releasedate fadein"><img src="images/bottom_releasedate@2x.png" alt="2025.11.5（Wed）数量限定発売">
-                  </p>
-
-                  <div class="spec fadein">
-                    <p>容量 　700ml</p>
-                    <p>アルコール分　　48%</p>
-                    <p>参考小売価格（税抜）</p>
-                    <p>150,000円</p>
-                  </div>
-                  <p class="small">※参考小売価格は、お特約店様・ご販売店様の自主的な価格設定を拘束するものではありません。</p>
-                </div>
-              </div>
-
-              <a href="/products/blended/thenikka/" class="thenikka"><img src="images/240529_tn na_banner@2x.jpg"
-                  alt="THE NIKKA"></a>
-
-            </div>
-          </div>
-        </div><!-- /tn2025 -->
-
-
-
-        <!--▲ コンテンツエリアここまで ▲-->
-      </div>
-
-    </main>
-    <!-- contents end -->
-
-    <!---------------------------- footer start ---------------------------->
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/common/template/foot.tmp.html'; ?>
-    <!----------------------------- footer end ----------------------------->
-
-  </div>
-  <!-- wrapper end -->
-
-  <!--▼ ページ固有のjsここから ▼-->
-  <script src="js/tn2025.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-  <script>
-    Fancybox.bind("[data-fancybox]", {
-      video: {
-        autoplay: false
-      },
-    });
-  </script>
-  <!--▲ ページ固有のjsここまで ▲-->
-
-  <!---------------------------- 構造化データ出力 start ---------------------------->
-  <?php breadcrumbs_jsonld(); ?>
-  <!---------------------------- 構造化データ出力 end ---------------------------->
-
-</body>
-
+        <!---------------------------- 構造化データ出力 start ---------------------------->
+        <?php breadcrumbs_jsonld(); ?>
+        <!---------------------------- 構造化データ出力 end ---------------------------->
+    </body>
 </html>

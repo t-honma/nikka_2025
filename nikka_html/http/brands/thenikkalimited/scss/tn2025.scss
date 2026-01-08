@@ -1,8 +1,13 @@
 @import "mq";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 
-#wrapper{
+#wrapper {
     background-color: #000;
+}
+.backToTop {
+    @include sp {
+        display: none !important;
+    }
 }
 
 #loader-bg {
@@ -17,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 1.0s ease;
+    transition: opacity 1s ease;
 
     @include sp {
         min-height: 100vh;
@@ -57,26 +62,26 @@
     transform: scale(0.9);
 }
 
-.breadcrumbs{
-    @include pc{
+.breadcrumbs {
+    @include pc {
         position: relative;
         z-index: 1;
     }
-    .inner{
-        @include sp{
-        display: none;
-    }
-        @include pc{
+    .inner {
+        @include sp {
+            display: none;
+        }
+        @include pc {
             position: relative;
             top: -25px;
         }
-        ol{
-            li{
+        ol {
+            li {
                 color: #fff;
-                @include sp{
+                @include sp {
                     font-size: 12px;
                 }
-                a{
+                a {
                     color: #fff;
                 }
             }
@@ -84,11 +89,12 @@
     }
 }
 
-.contents{
-    @include sp{
+.contents {
+    position: relative;
+    @include sp {
         margin-top: -7.5vw;
     }
-    @include pc{
+    @include pc {
         margin-top: -51px;
     }
 }
@@ -125,15 +131,16 @@
         height: auto;
     }
 
-    h2,h3 {
-        font-family: "Noto Serif JP", serif;
+    h2,
+    h3 {
+        font-family: YakuHanJP, "Noto Serif JP", serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
     }
 
     p {
-        font-family: "Noto Sans JP", sans-serif;
+        font-family: YakuHanJP, "Noto Sans JP", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
@@ -181,13 +188,29 @@
 
             .date {
                 @include sp {
-                    width: get_vw(568);
-                    margin: get_vw(58) auto 0 auto;
+                    position: absolute;
+                    width: 32vw;
+                    top: 186vw;
+                    left: 5vw;
+                }
+                @include pc {
+                    position: absolute;
+                    width: 144px;
+                    right: 124px;
+                    top: 503px;
+                }
+            }
+
+            .limited {
+                @include sp {
+                    width: 36.9791666667vw;
+                    margin: 8vw auto 0 43vw;
                 }
 
                 @include pc {
                     position: absolute;
-                    top: 504px;
+                    top: 535px;
+                    // top: 504px;
                     right: 97px;
                     width: 204px;
                 }
@@ -210,7 +233,6 @@
                     width: 67px;
                 }
             }
-
         }
     }
 
@@ -233,9 +255,68 @@
             }
         }
     }
+    .mainNav_wrap {
+        @include pc {
+            position: relative;
+            width: 100%;
+            height: 80px;
+        }
+    }
+    #pageNav {
+        @include sp {
+            display: none;
+        }
+        @include pc {
+            background-color: #2d3233;
+            display: flex;
+            height: 80px;
+            width: 100%;
+            align-items: center;
+            transition: 0s;
+            position: relative;
+            top: 0px;
+            // margin-top: -80px;
+            // margin-bottom: 80px;
+            z-index: 5;
+            ul {
+                display: flex;
+                justify-content: space-between;
+                width: 820px;
+                margin: 0 auto;
+                li {
+                    a {
+                        display: block;
+                        img {
+                            width: auto;
+                            height: 34px;
+                            opacity: 1;
+                            transition: 0.5s;
+                        }
+                        &:hover {
+                            img {
+                                opacity: 0.6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.fixed {
+            // position: fixed;
+            top: -80px;
+            margin: 0;
+        }
+
+        &.offset {
+            position: fixed;
+            top: 80px;
+            transition: 0.5s;
+        }
+    }
 
     .intro {
         background-color: #020202;
+        z-index: 1;
 
         @include sp {
             background-image: url(../images/intro_bg_sp.jpg);
@@ -280,7 +361,6 @@
                 @include sp {
                     font-size: get_vw(24);
                     line-height: 1.85;
-
                 }
 
                 @include pc {
@@ -325,6 +405,285 @@
         }
     }
 
+    .profile {
+        position: relative;
+        background-position: center top;
+        background-repeat: no-repeat;
+        @include sp {
+            background-image: url(../images/profile_bg_sp.jpg);
+            background-size: 100% auto;
+        }
+        @include pc {
+            background-image: url(../images/profile_bg@2x.jpg);
+            background-size: 2000px auto;
+            padding: 330px 0 0 0;
+            z-index: 1;
+            clip-path: inset(0);
+        }
+        .inner {
+            @include sp {
+                padding: get_vw(210) 0 get_vw(100) 0;
+            }
+            @include pc {
+                width: 1110px;
+                z-index: 3;
+            }
+
+            .movie_container {
+                @include pc {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 884px;
+                    margin: 0 auto;
+                }
+                .movie_wrap {
+                    @include sp {
+                        width: get_vw(400);
+                    }
+                    @include pc {
+                        width: 352px;
+                    }
+                    a {
+                        border: 1px solid #b3b3b3;
+                        display: block;
+                        @include sp {
+                        }
+                        @include pc {
+                            transition: 0.5s;
+                        }
+                        &:hover {
+                            @include pc {
+                                opacity: 0.6;
+                            }
+                        }
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    &.iseki {
+                        @include sp {
+                            margin: get_vw(100) 0 0 get_vw(198);
+                        }
+                    }
+                }
+            }
+
+            // .movie_wrap {
+            //     a {
+            //         display: block;
+            //         margin: 0 auto;
+            //         position: relative;
+
+            //         background-color: #181818;
+            //         @include sp {
+            //             width: get_vw(560);
+            //             height: get_vw(330);
+            //         }
+            //         @include pc {
+            //             width: 710px;
+            //             height: 420px;
+            //         }
+            //         &:before {
+            //             content: "";
+            //             display: block;
+            //             background-image: url(../images/btn_playmovie@2x.png);
+            //             background-repeat: no-repeat;
+            //             background-size: contain;
+            //             background-position: center;
+            //             opacity: 1;
+            //             transition: 0.5s;
+            //             @include AbsXCenYCen;
+            //             @include sp {
+            //                 width: get_vw(205);
+            //                 height: get_vw(45);
+            //             }
+            //             @include pc {
+            //                 width: 171px;
+            //                 height: 38px;
+            //             }
+            //         }
+            //         &:hover {
+            //             &:before {
+            //                 @include pc {
+            //                     opacity: 0.6;
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+            .profile_wrap {
+                box-sizing: border-box;
+                position: relative;
+                @include sp {
+                    width: get_vw(645);
+                    margin: get_vw(256) auto 0 auto;
+                    padding: 0 get_vw(20);
+                }
+                @include pc {
+                    border: 1px solid #fff;
+                    width: 910px;
+                    margin-top: 295px;
+                }
+                &.ozaki {
+                    @include sp {
+                        border-bottom: 1px solid #fff;
+                        padding-bottom: get_vw(120);
+                    }
+                    @include pc {
+                        margin-bottom: 280px;
+                        padding: 40px 60px 40px 390px;
+                    }
+                    .photo {
+                        @include pc {
+                            left: -1px;
+                            top: -1px;
+                        }
+                    }
+                }
+                &.iseki {
+                    @include sp {
+                        margin-top: get_vw(105);
+                    }
+                    @include pc {
+                        margin: 0 0 0 auto;
+                        padding: 40px 390px 40px 60px;
+                    }
+                    .photo {
+                        @include pc {
+                            right: -1px;
+                            bottom: -1px;
+                        }
+                    }
+                }
+                .photo {
+                    @include sp {
+                        display: block;
+                        width: get_vw(400);
+                        height: auto;
+                        margin: 0 auto;
+                    }
+                    @include pc {
+                        position: absolute;
+                        width: 325px;
+                        height: auto;
+                    }
+                }
+                p {
+                    text-align: justify;
+                    @include sp {
+                        font-size: get_vw(24);
+                        margin-top: get_vw(50);
+                        line-height: 2;
+                    }
+                    @include pc {
+                        font-size: 14px;
+                        line-height: 1.9;
+                    }
+                    &.name {
+                        line-height: 1;
+                        font-family: YakuHanJP, "Noto Serif JP", serif;
+                        font-optical-sizing: auto;
+                        font-weight: 400;
+                        font-style: normal;
+                        @include sp {
+                            font-size: get_vw(45);
+                            margin-top: get_vw(50);
+                        }
+                        @include pc {
+                            font-size: 26px;
+                            margin-bottom: 30px;
+                        }
+                        .kana {
+                            @include sp {
+                                font-size: get_vw(22);
+                                margin-left: get_vw(60);
+                            }
+                            @include pc {
+                                font-size: 12.5px;
+                                margin-left: 48px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // &:after {
+        //     content: "";
+        //     position: fixed;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100vw;
+        //     height: 100vh;
+        //     background-image: url(../images/large_img.jpg);
+        //     background-size: cover;
+        //     background-position: center;
+        //     z-index: 1;
+        // }
+    }
+
+    .interview {
+        @include sp {
+            padding: get_vw(150) 0 get_vw(245) 0;
+        }
+        @include pc {
+            margin: 0;
+            padding: 300px 0 250px 0;
+        }
+        .inner {
+            @include sp {
+                margin: 0;
+            }
+            .topic_contaier {
+                @include pc {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin: 0 auto;
+                    width: 1110px;
+                }
+                button.topic_wrap {
+                    background-color: transparent;
+                    display: block;
+                    border: 0;
+                    margin: 0;
+                    padding: 0;
+                    @include sp {
+                        margin-top: get_vw(115);
+                    }
+                    @include pc {
+                        margin-bottom: 50px;
+                        width: 500px;
+                        transition: 0.5s;
+                        // opacity: 1;
+                    }
+                    &:hover {
+                        @include pc {
+                            cursor: pointer;
+                            opacity: 0.7;
+                        }
+                    }
+                    &:first-of-type {
+                        @include sp {
+                            margin-top: 0;
+                        }
+                    }
+                    &:nth-of-type(even) {
+                        @include pc {
+                            // transition-delay: 0.6s;
+                        }
+                    }
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        @include pc {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .blenders {
         @include sp {
             background-image: url(../images/blenders_bg_sp.jpg);
@@ -352,34 +711,34 @@
             }
 
             section {
-                &#blenders{
-                    h2{
-                        @include sp{
+                &#blenders {
+                    h2 {
+                        @include sp {
                             padding: get_vw(120) 0 get_vw(70) 0;
                         }
-                        @include pc{
+                        @include pc {
                             padding: 190px 0 100px 0;
                         }
                     }
                 }
-                &#movie{
-                    h2{
-                        @include sp{
+                &#movie {
+                    h2 {
+                        @include sp {
                             padding: get_vw(215) 0 get_vw(70) 0;
                         }
-                        @include pc{
+                        @include pc {
                             padding: 215px 0 100px 0;
                         }
                     }
                 }
-                h2{
+                h2 {
                     text-align: center;
-                    img{
-                        @include sp{
+                    img {
+                        @include sp {
                             width: auto;
                             height: get_vw(30);
                         }
-                        @include pc{
+                        @include pc {
                             width: auto;
                             height: 30px;
                         }
@@ -431,14 +790,14 @@
                                 padding-bottom: 0;
                                 opacity: 0;
                                 overflow: hidden;
-                                transition:1.0s ease;
+                                transition: 1s ease;
                             }
-                            @include pc{
+                            @include pc {
                                 height: auto !important;
                             }
 
                             &.open {
-                                @include sp{
+                                @include sp {
                                     height: auto;
                                     margin: get_vw(50) 0 0 0;
                                     padding-bottom: get_vw(380);
@@ -461,24 +820,23 @@
                                     line-height: 1.8;
                                     width: 350px;
                                 }
-                                &:nth-child(2){
-                                    @include sp{
+                                &:nth-child(2) {
+                                    @include sp {
                                         margin-top: 0.75em;
                                     }
-                                    @include pc{
+                                    @include pc {
                                         margin-top: 0.75em;
                                     }
                                 }
                             }
-                            &.open{
-                                p{
-                                    @include sp{
+                            &.open {
+                                p {
+                                    @include sp {
                                         height: auto;
                                     }
                                 }
                             }
                         }
-
 
                         .button {
                             @include sp {
@@ -519,7 +877,7 @@
                                 @include sp {
                                     font-size: get_vw(20);
                                 }
-                                @include pc{
+                                @include pc {
                                     font-size: 12px;
                                 }
                             }
@@ -587,66 +945,64 @@
 
                             .fadein {
                                 @include pc {
-                                    transition-delay: .6s;
+                                    transition-delay: 0.6s;
                                 }
                             }
                         }
-
                     }
                 }
 
-                .movie_wrap {
-                    @include pc {
-                        margin: 0 auto;
-                        width: 1064px;
-                        display: flex;
-                        justify-content: space-between;
-                    }
+                // .movie_wrap {
+                //     @include pc {
+                //         margin: 0 auto;
+                //         width: 1064px;
+                //         display: flex;
+                //         justify-content: space-between;
+                //     }
 
-                    &.disp_sp {
-                        @include pc {
-                            display: none;
-                        }
-                    }
+                //     &.disp_sp {
+                //         @include pc {
+                //             display: none;
+                //         }
+                //     }
 
-                    &.disp_pc {
-                        @include sp {
-                            display: none;
-                        }
-                    }
+                //     &.disp_pc {
+                //         @include sp {
+                //             display: none;
+                //         }
+                //     }
 
-                    a {
-                        display: block;
-                        border: none;
-                        margin: 0;
-                        padding: 0;
+                //     a {
+                //         display: block;
+                //         border: none;
+                //         margin: 0;
+                //         padding: 0;
 
-                        @include sp {
-                            width: get_vw(400);
+                //         @include sp {
+                //             width: get_vw(400);
+                //         }
 
-                        }
+                //         @include pc {
+                //             width: 401px;
+                //         }
 
-                        @include pc {
-                            width: 401px;
-                        }
+                //         &.ozeki {
+                //             @include sp {
+                //             }
+                //         }
 
-                        &.ozeki {
-                            @include sp {}
-                        }
+                //         &.iseki {
+                //             @include sp {
+                //                 margin-top: get_vw(125);
+                //                 margin-left: 36vw;
+                //             }
+                //         }
 
-                        &.iseki {
-                            @include sp {
-                                margin-top: get_vw(125);
-                                margin-left: 36vw;
-                            }
-                        }
-
-                        img {
-                            display: block;
-                        }
-                    }
-                }
-
+                //         img {
+                //             display: block;
+                //         }
+                //     }
+                // }
             }
         }
     }
@@ -667,11 +1023,10 @@
             background-repeat: no-repeat;
             background-position: center top;
             background-size: 2000px auto;
-
         }
 
         .lcopy {
-            font-family: "Noto Serif JP", serif;
+            font-family: YakuHanJP, "Noto Serif JP", serif;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
@@ -696,7 +1051,6 @@
                 margin-left: get_vw(40);
                 margin-right: get_vw(40);
             }
-
 
             .tastingnote {
                 @include pc {
@@ -749,7 +1103,7 @@
 
                     @include sp {
                         font-size: get_vw(24);
-                        line-height: 2.0;
+                        line-height: 2;
                     }
 
                     @include pc {
@@ -819,14 +1173,35 @@
 
                     .releasedate {
                         @include sp {
-                            display: block;
-                            width: get_vw(568);
-                            margin: get_vw(35) auto 0 auto;
+                            margin-top: 3.2vw;
                         }
-
                         @include pc {
-                            width: 548px;
-                            margin-top: 25px;
+                            margin: 29px 0 0 5px;
+                        }
+                        img {
+                            display: inline-block;
+                            @include pc {
+                                display: inline-block;
+                            }
+                            &.date {
+                                @include sp {
+                                    width: get_vw(318);
+                                }
+                                @include pc {
+                                    width: 304px;
+                                }
+                            }
+                            &.limited {
+                                @include sp {
+                                    width: get_vw(206);
+                                    margin-left: 4vw;
+                                }
+                                @include pc {
+                                    width: 200px;
+                                    margin-top: 25px;
+                                    margin-left: 45px;
+                                }
+                            }
                         }
                     }
 
@@ -873,7 +1248,6 @@
                         }
                     }
                 }
-
             }
 
             a.thenikka {
@@ -891,27 +1265,121 @@
                     margin-top: 230px;
                 }
             }
-
         }
     }
 }
 
-.fancybox__content {
+// スマホのナビゲーション
+.sp_navbtn {
     @include sp {
-        width: get_vw(560) !important;
-        height: get_vw(980) !important;
+        background-image: url(../images/sp_navbtn_d.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: get_vw(126);
+        height: get_vw(56);
+        position: fixed;
+        right: get_vw(50);
+        bottom: get_vw(50);
+        transition: 0.5s;
+        opacity: 0;
+        pointer-events: none;
     }
-
-    @include pc {
-        width: 380px !important;
-        height: 670px !important;
+    &.visible {
+        opacity: 1;
+        pointer-events: inherit;
+    }
+    &.active {
+        opacity: 0;
+        pointer-events: none;
+    }
+    &.absolute {
+        position: absolute;
     }
 }
+
+.spNav_wrap {
+    @include sp {
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.5s;
+        background-color: rgba($color: #000, $alpha: 0.95);
+        position: fixed;
+        width: 100%;
+        height: 70vh;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+    }
+    @include pc {
+        display: none;
+    }
+    &.active {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+#spNav {
+    @include sp {
+        background-color: rgba($color: #92a6a9, $alpha: 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    ul {
+        width: get_vw(410);
+        li {
+            margin-top: get_vw(130);
+            &:first-child {
+                margin-top: 0;
+            }
+            a {
+                display: block;
+                width: 100%;
+                img {
+                    width: auto;
+                    height: get_vw(74);
+                    &.top {
+                        width: get_vw(72);
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .sp_close {
+        @include sp {
+            width: get_vw(54);
+            height: get_vw(54);
+            position: fixed;
+            right: get_vw(50);
+            bottom: get_vw(100);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// .fancybox__content {
+//     @include sp {
+//         width: get_vw(560) !important;
+//         height: get_vw(980) !important;
+//     }
+
+//     @include pc {
+//         width: 380px !important;
+//         height: 670px !important;
+//     }
+// }
 
 /* テキスト fadein */
 .fadein {
     transition: 0.6s;
-    transition-delay: .2s;
+    transition-delay: 0.2s;
     opacity: 0;
 
     @include sp {
@@ -926,19 +1394,423 @@
         opacity: 1;
         transform: translateY(0px);
     }
-
 }
 
-/* Fancybox全体のフォーカス枠を消す */
-.fancybox__container:focus,
-.fancybox__slide:focus,
-.fancybox__content:focus,
-.fancybox__content video:focus {
-    outline: none !important;
+/* モーダル */
+.modal {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.95);
+    @include sp {
+        // padding: 20vw 0;
+        height: auto;
+        z-index: 9999;
+    }
+    @include pc {
+        height: 100vh;
+    }
 }
 
-/* ChromeやSafariが自動で付けるfocusリングも消す */
-.fancybox__content video {
+/* モーダルがactiveの時 */
+.modal.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* モーダル背景のオーバーレイ部分 */
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* モーダルのコンテンツ */
+.modal__content {
+    position: relative;
+    width: 100%;
+    @include pc {
+        // max-width: 1100px;
+        // height: 580px;
+        // padding: 20px;
+    }
+}
+.modal_inner {
+    // filter: drop-shadow(0px 0px 4px #ddd);
+    // background: #fff;
+    width: 100%;
+    // height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // @include sp {
+    //     height: 80dvh;
+    //     padding: 10dvh 0;
+    // }
+}
+.modalInSlider {
+}
+
+// 前へ次へ
+.swiper-button-prev {
+    background-image: url(../images/modal/arrow_left@2x.png);
+    @include sp {
+        left: 11vw !important;
+        background-position: left center;
+    }
+    @include pc {
+        left: 55px !important;
+    }
+}
+.swiper-button-next {
+    background-image: url(../images/modal/arrow_right@2x.png);
+    @include sp {
+        right: 11vw !important;
+        background-position: right center;
+    }
+    @include pc {
+        right: 55px !important;
+    }
+}
+.swiper-button-prev,
+.swiper-button-next {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include sp {
+        width: get_vw(50) !important;
+        height: get_vw(63) !important;
+        bottom: 4vh !important;
+        top: auto !important;
+    }
+    @include pc {
+        width: 18px !important;
+        height: 36px !important;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+// pager
+.swiper-pagination {
+    @include sp {
+        bottom: 5.8vh !important;
+    }
+    @include pc {
+        // left: auto !important;
+        // width: auto !important;
+        // top: -58px;
+        // right: 262px;
+        // height: 22px;
+
+        position: absolute;
+        top: 20px;
+        right: 150px;
+        left: auto !important;
+        width: auto !important;
+        height: 22px !important;
+    }
+}
+.swiper-pagination-bullet {
+    background-color: #fff !important;
+    opacity: 1 !important;
+    @include sp {
+        width: get_vw(12) !important;
+        height: get_vw(5) !important;
+        border-radius: get_vw(2) !important;
+        margin: 0 1.75vw !important;
+    }
+    @include pc {
+        width: 6px !important;
+        height: 3px !important;
+        border-radius: 1px !important;
+        margin: 0 8px !important;
+        transition: 0.3s;
+    }
+    &.swiper-pagination-bullet-active {
+        background-color: #97a4a7 !important;
+        @include sp {
+            width: get_vw(34) !important;
+        }
+        @include pc {
+            width: 18px !important;
+        }
+    }
+}
+
+/* 閉じるボタン */
+.modal__close-btn {
+    cursor: pointer;
+    z-index: 20;
+    background-image: url(../images/modal/close@2x.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include sp {
+        position: absolute;
+        width: get_vw(70);
+        height: get_vw(70);
+        top: 6vw;
+        right: 14vw;
+    }
+    @include pc {
+        // position: absolute;
+        // width: 25px !important;
+        // height: 25px !important;
+        // right: 20px !important;
+        // top: 20px !important;
+        position: absolute;
+        width: 25px !important;
+        height: 25px !important;
+        right: 50px !important;
+        top: 22px !important;
+    }
+}
+.modal__close-btn:hover {
+    opacity: 0.8;
+}
+
+/* 閉じるボタンのX */
+// .lineClose {
+//     display: inline-block;
+//     vertical-align: middle;
+//     color: #313131;
+//     line-height: 1;
+//     width: 2rem;
+//     height: 0.1rem;
+//     background: currentColor;
+//     border-radius: 0.1rem;
+//     position: relative;
+//     transform: rotate(45deg);
+// }
+// .lineClose::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: inherit;
+//     border-radius: inherit;
+//     transform: rotate(90deg);
+// }
+
+// modal中身
+#modal-swiper {
+    @include sp {
+        height: 76dvh;
+        padding: 12dvh 0;
+    }
+}
+.swiper-wrapper {
+    @include sp {
+    }
+    @include pc {
+        height: 580px;
+    }
+}
+.swiper-slide {
+    position: relative;
+    @include sp {
+        box-sizing: border-box;
+        margin: 0;
+        // padding: get_vw(160) 0;
+        // height: 80vh !important;
+        overflow-y: scroll;
+    }
+    @include pc {
+        width: 100%;
+    }
+    .slide_wrap {
+        position: relative;
+        @include sp {
+            margin: 0 auto;
+            width: get_vw(600);
+        }
+        @include pc {
+            // width: 1100px;
+            width: 100%;
+            height: 580px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        &:after {
+            @include pc {
+                content: "";
+                position: absolute;
+                display: block;
+                background-color: #212626;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                right: -306px;
+            }
+        }
+        .slide_wrap_inner {
+            position: relative;
+            @include pc {
+                width: 1100px;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .photo_pc {
+        @include sp {
+            display: none;
+        }
+        @include pc {
+            position: absolute;
+            width: 388px;
+            height: auto;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+    .text_wrap {
+        color: #fff;
+        @include sp {
+            padding: 0 0 5vw 0;
+        }
+        @include pc {
+            margin: 0 0 0 auto;
+            padding-top: 60px;
+            width: 635px;
+        }
+        .tag {
+            display: block;
+            @include pc {
+                margin: 0 auto;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            &.discovery {
+                @include sp {
+                    width: get_vw(124);
+                }
+                @include pc {
+                    width: 62px;
+                }
+            }
+            &.achievement {
+                @include sp {
+                    width: get_vw(171);
+                }
+                @include pc {
+                    width: 86px;
+                }
+            }
+            &.journey {
+                @include sp {
+                    width: get_vw(110);
+                }
+                @include pc {
+                    width: 56px;
+                }
+            }
+            &.innovation {
+                @include sp {
+                    width: get_vw(153);
+                }
+                @include pc {
+                    width: 74px;
+                }
+            }
+        }
+        .title {
+            font-family: YakuHanJP, "Noto Serif JP", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            @include sp {
+                font-size: 5.4vw;
+                line-height: 1.85;
+                margin-top: 8vw;
+            }
+            @include pc {
+                font-size: 21px;
+                letter-spacing: 0.1em;
+                line-height: 2;
+                margin-top: 23px;
+                text-align: center;
+            }
+            &.journey,
+            &.innovation {
+                @include sp {
+                    letter-spacing: 0.01em;
+                }
+            }
+        }
+        .txt_body {
+            text-align: justify;
+            @include sp {
+                font-size: get_vw(24);
+                letter-spacing: 0.01em;
+                line-height: 2;
+                margin-top: 8vw;
+            }
+            @include pc {
+                font-size: 11px;
+                letter-spacing: 0.01em;
+                line-height: 2.15;
+                width: 516px;
+                margin: 25px auto 0 auto;
+            }
+            .spacer {
+                display: block;
+                @include pc {
+                    font-size: 0;
+                    height: 15px;
+                }
+            }
+            .photo_sp {
+                @include sp {
+                    display: block;
+                    margin: get_vw(70) auto;
+                    width: get_vw(484);
+                }
+            }
+        }
+    }
+}
+
+// movie popup
+.fancybox__content {
+    border: 1px solid #b3b3b3;
     outline: none !important;
-    border: none !important;
+    @include sp {
+        width: get_vw(580) !important;
+        height: get_vw(1022) !important;
+    }
+    @include pc {
+        width: 380px !important;
+        height: 670px !important;
+    }
+    video {
+        outline: none !important;
+    }
+}
+.carousel__button.is-close {
+    @include sp {
+        right: -3vw !important;
+        top: -10vw !important;
+    }
 }
